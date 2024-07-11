@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background: url('../images/skyscraper.jpeg') no-repeat;
+    background-size: cover; 
+    font-family: "Phudu", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: capitalize;
+    /* color: rgb(25, 24, 24); */
+    /* width: 100%; */
+    /* margin: 5rem; */
+
+}
+
+
+main {
+
+    margin: 5rem;
+
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 100%;
+    /* color: rgb(25, 24, 24); */
+    font-weight: 400;
+}
+
+body a {
+
+    color:  rgb(25, 24, 24);
+}
+
+.header-logo {
+    padding: .8rem;
+    text-align: center;
+    text-transform:uppercase;
+
+}
+
+.header-logo:hover , header .header-nav-bar a :hover {
+    color: #0F67B1;
+}
+
+.header-nav-bar {
+    background-color:#fff;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 3px rgb(132, 124, 124);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 60%;
+    padding: .7rem .8rem;
+}
+
+.header-nav-bar a {
+    padding: .7rem;
+    text-decoration: none;
+}
+
+.header-nav-bar-icons a {
+
+    padding: .7rem .3rem;
+    text-decoration: none;
+}
+
+.header-nav-bar-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-nav-bar-icons span {
+
+    font-size: 1.7rem;
+}
+
+#sign-up {
+    font-size: 1.3rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 3.6rem;
+
+}
+
+section div {
+    padding: 1.3rem 0;
+}
+
+.title {
+    font-size: 5rem;
+    text-transform: uppercase;
+
+}
+/* hover title */
+.title:hover {  
+    font-size: 5rem;
+    text-transform: uppercase;
+    /* transition: 8.ms;
+    animation: forwards;
+    color: #0F67B1; */
+}
+
+.btn {
+    background-color:black;
+    color: #fff;
+    border-radius: 2rem;
+    padding: .7rem;
+    width: 13%;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(213, 208, 208);
+    width: 100%;
+    position: relative;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.footer-nav-bar{
+    
+    position: relative;
+    padding: 1rem 0 1rem 0;
+    bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 3px rgb(132, 124, 124);
+    padding: .9rem;
+    background-color: #fff;
+    width: 50%;
+    height: fit-content;
+    
+
+}
+
+.footer-nav-bar div{
+    margin: 0 2rem 0 2rem;
+
+}
+
+.footer-nav-bar a {
+    text-decoration: none;
+
+}
+
+.footer-nav-bar a span {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.footer-nav-bar a {
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.all {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: hsl(153, 47%, 36%);
+
+}
+.factory {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #6F4E37;
+}
+.hotel {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #DC0083;
+}
+.villa {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #0F67B1;
+}
+
+.all a , .all span{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #9DDE8B;
+    color: #00780a;
+}
+.factory a , .factory span {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #DEAC80;
+    color: #6F4E37;
+}
+.hotel a, .hotel span  {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #FF7EE2;
+    color: #DC0083;
+}
+
+.villa a , .villa span{
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 50%;
+    color: #0F67B1;
+}
