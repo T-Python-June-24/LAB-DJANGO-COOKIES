@@ -1,0 +1,72 @@
+
+.menu-item {
+    display: flex;
+    flex-direction: row; /* Ensures normal left-to-right layout */
+    justify-content: space-around; /* Adjusts space between items */
+    align-items: center;
+    padding: 3rem;
+}
+
+.bar {
+    border-radius: 30rem;  
+    padding: 1rem 2.7rem;   
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;           
+    font-size: 1rem;
+}
+
+.bar a {
+    text-decoration: none; 
+    color:black;  
+    font-weight: 400;  
+    padding: 0.5rem 2.3rem;  
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.bar a:hover {
+    color: #fb1111; 
+    transition: color 0.3s ease;  
+
+}
+
+.right-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.7rem;
+}
+.menu-item h1 {
+    font-weight: 450;
+    font-family: 'Phudu', sans-serif;
+    font-size: 2.5rem;
+}
+
+.right-nav a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+.right-nav :hover{
+    color: #fb1111; 
+    transition: color 0.3s ease;  
+
+}
+.background-image {
+    position: fixed;      
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;         
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;               
+}
+.header-view, .menu-item, .bar, .right-nav {
+    position: relative;  
+    z-index: 1;          
+}
