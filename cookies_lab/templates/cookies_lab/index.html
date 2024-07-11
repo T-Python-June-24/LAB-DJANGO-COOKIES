@@ -1,0 +1,65 @@
+{% extends 'cookies_lab/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  .bg-image {
+    background-image: url("{% if 'mode' in request.COOKIES %}{% static 'images/skyscraper-dark.jpg' %}{% else %}{% static 'images/skyscraper.jpeg' %}{% endif %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+  }
+</style>
+
+<div class="w-full h-[90vh] relative bg-image">
+  {% include 'cookies_lab/navbar.html' %}
+  <div
+    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
+  >
+    <div class="{% if 'mode' in request.COOKIES %}bg-[#282828]{% else %}bg-white{% endif %} rounded-full shadow-lg px-24 py-4">
+      <ul class="flex space-x-16">
+        <li>
+          <button class="flex flex-col items-center">
+            <div class="{% if 'mode' in request.COOKIES %}bg-green-800{% else %}bg-green-200{% endif %} p-3 rounded-full mb-2">
+              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-green-300{% else %}text-green-600{% endif %}">
+                house
+              </span>
+            </div>
+            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-green-300{% else %}text-green-600{% endif %}">ALL</span>
+          </button>
+        </li>
+        <li>
+          <button class="flex flex-col items-center">
+            <div class="{% if 'mode' in request.COOKIES %}bg-yellow-800{% else %}bg-yellow-200{% endif %} p-3 rounded-full mb-2">
+              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-yellow-300{% else %}text-yellow-600{% endif %}">
+                factory
+              </span>
+            </div>
+            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-yellow-300{% else %}text-yellow-600{% endif %}">PROPERTIES</span>
+          </button>
+        </li>
+        <li>
+          <button class="flex flex-col items-center">
+            <div class="{% if 'mode' in request.COOKIES %}bg-pink-800{% else %}bg-pink-200{% endif %} p-3 rounded-full mb-2">
+              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-pink-300{% else %}text-pink-600{% endif %}">
+                hotel
+              </span>
+            </div>
+            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-pink-300{% else %}text-pink-600{% endif %}">HOTEL</span>
+          </button>
+        </li>
+        <li>
+          <button class="flex flex-col items-center">
+            <div class="{% if 'mode' in request.COOKIES %}bg-blue-800{% else %}bg-blue-200{% endif %} p-3 rounded-full mb-2">
+              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-blue-300{% else %}text-blue-600{% endif %}">
+                villa
+              </span>
+            </div>
+            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-blue-300{% else %}text-blue-600{% endif %}">VILLA</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

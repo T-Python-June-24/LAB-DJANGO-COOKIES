@@ -1,0 +1,61 @@
+{% extends 'cookies_lab/base.html' %} {% load static %} {% block content %}
+<div class="absolute inset-0">
+  <div class="container mx-auto mt-16 px-8 py-6 h-full flex flex-col">
+    <header class="flex justify-between items-center mb-8">
+      <div class="text-4xl font-bold {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %}">HOME</div>
+      <nav class="{% if 'mode' in request.COOKIES %}bg-[#282828] text-white{% else %}bg-white text-gray-800{% endif %} rounded-full px-32 py-8 shadow-md">
+        <ul class="flex space-x-24">
+          <li>
+            <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-900{% endif %}">Home</a>
+          </li>
+          <li>
+            <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-900{% endif %}">Properties</a>
+          </li>
+          <li>
+            <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-900{% endif %}">Services</a>
+          </li>
+          <li>
+            <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-900{% endif %}">About</a>
+          </li>
+          <li>
+            <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-900{% endif %}">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex items-center space-x-4 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %}">
+        <a href="#" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-700{% endif %} flex items-center">
+          <span class="material-symbols-outlined mr-2">person</span>
+          <span class="font-sans">Sign up</span>
+        </a>
+        <a href="{% url 'cookies_lab:light_mode' %}" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300{% else %}hover:text-gray-700 bg-white{% endif %} rounded-full p-2 {% if 'mode' not in request.COOKIES %}bg-white{% endif %} flex items-center justify-center w-10 h-10">
+          <span class="material-symbols-outlined"> clear_day </span>
+        </a>
+        <a href="{% url 'cookies_lab:dark_mode' %}" class="{% if 'mode' in request.COOKIES %}hover:text-gray-300 bg-[#282828]{% else %}hover:text-gray-700{% endif %} rounded-full p-2 {% if 'mode' in request.COOKIES %}bg-[#282828]{% endif %} flex items-center justify-center w-10 h-10">
+          <span class="material-symbols-outlined"> dark_mode </span>
+        </a>
+      </div>
+    </header>
+
+    <main class="flex-grow flex items-start">
+      <div class="max-w-2xl">
+        <h1
+          class="text-[9rem] leading-tight font-medium mb-4 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %} slide-in-elliptic-right-fwd"
+        >
+          FIND YOUR DREAMS
+        </h1>
+        <p class="mb-6 text-sm small-text-font {% if 'mode' in request.COOKIES %}text-gray-300{% else %}text-gray-800{% endif %}">
+          Our catalog will surprise you. Rather, discover an unprecedented
+          offers of luxury properties. Our catalog will surprise you. Rather,
+          discover an unprecedented offers of luxury properties.
+        </p>
+        <button
+          class="bg-black text-white hover:bg-gray-800 px-8 py-1 rounded-full small-text-font"
+        >
+          Explore Properties
+        </button>
+      </div>
+    </main>
+  </div>
+</div>
+
+{% endblock %}
