@@ -1,8 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
-def home(request):
-    return render(request, 'RealstateClone/home.html')
 
 
 properties = [
@@ -13,8 +10,12 @@ properties = [
 
 
 ]
-
 # Create your views here.
+def home(request):
+    return render(request, 'RealstateClone/home.html')
+
+
+
 def propertiesPage(request):
     context = {
         'properties': properties,
