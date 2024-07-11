@@ -27,9 +27,9 @@
     <h1 class="text-4xl font-medium mb-8 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %}">
       Our Properties
     </h1>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
       {% for property in properties %}
-      <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+      <div class="rounded-lg overflow-hidden shadow-lg bg-white mb-8">
         <div class="relative pb-[75%]">
           <img src="{% static 'images/'|add:property.image %}" alt="{{ property.title }}" class="absolute inset-0 w-full h-full object-cover">
         </div>
@@ -42,6 +42,9 @@
           </div>
         </div>
       </div>
+      {% if forloop.counter|divisibleby:3 and not forloop.last %}
+        </div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {% endif %}
       {% endfor %}
     </div>
   </div>

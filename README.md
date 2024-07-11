@@ -1,6 +1,7 @@
 # LAB-DJANGO-COOKIES
 
 ## Create a website for a real estate agency (RealEstate) , the website should have a home page that looks like the image below , you should :
+
 - use templates & templates inheritance
 - use google fonts (choose the same font `Phudu` , or a similar one) [https://fonts.google.com](https://fonts.google.com)
 - use google fonts icons (choose similar icons) [https://fonts.google.com/icons](https://fonts.google.com/icons)
@@ -12,8 +13,8 @@
 - Use CSS Transitions and Animations to add vitality to your page.
 - `Explore Properties` button displays the page for properties.
 
-
 #### properties list
+
 ```
     properties = [
         {"title" : "Villa Modern in Malqa", "image" : "villa1.jpg"},
@@ -24,16 +25,21 @@
 ```
 
 ### Main page Light Mode
+
 <img width="100%" src="https://github.com/T-Python-June-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-light.png?raw=true">
 
 ### Dark Mode
+
 <img width="100%" src="https://github.com/T-Python-June-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-dark.png?raw=true">
 
 ### Properties Page `properties/`
+
 <img width="100%"  src="https://github.com/T-Python-June-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-properties.png?raw=true">
 
 ### Contact Us Page `contact/`
+
 <img width="100%"  src="https://github.com/T-Python-June-24/LAB-DJANGO-COOKIES/blob/main/resources/screenshots/screen-contact.png?raw=true">
 
 ### A screen recording walktrhough of the final result
+
 <img width="100%"  src="https://github.com/T-Python-June-24/LAB-DJANGO-COOKIES/blob/main/screenrecord.gif?raw=true">

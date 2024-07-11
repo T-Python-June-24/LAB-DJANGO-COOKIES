@@ -25,9 +25,9 @@
 <div class="background-image"></div>
 {{ block.super }}
 
-<div class="content-wrapper max-w-7xl mx-auto">
+<div class="content-wrapper max-w-7xl ml-32">
   <main class="flex-grow flex items-start">
-    <div class="max-w-2xl">
+    <div class="max-w-2xl ">
       <h1
         class="text-[9rem] leading-tight font-medium mb-4 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %} slide-in-elliptic-right-fwd cursor-pointer"
         onclick="location.reload();"
@@ -41,11 +41,12 @@
         of luxury properties. Our catalog will surprise you. Rather, discover an
         unprecedented offers of luxury properties.
       </p>
-      <button
+      <a
+        href="{% url 'cookies_lab:properties' %}"
         class="bg-black text-white px-8 py-1 rounded-full hover:bg-gray-800 small-text-font"
       >
         Explore Properties
-      </button>
+      </a>
     </div>
   </main>
 </div>
@@ -70,7 +71,10 @@
         </button>
       </li>
       <li>
-        <a href="{% url 'cookies_lab:properties' %}" class="flex flex-col items-center">
+        <a
+          href="{% url 'cookies_lab:properties' %}"
+          class="flex flex-col items-center"
+        >
           <div
             class="bg-yellow-200 p-3 rounded-full mb-2 flex items-center justify-center"
           >
