@@ -2,8 +2,40 @@
 {%load static%}
 
 {% block background-content %}
-<img class="background-image" src="/static/images/skyscraper.jpeg" alt="">
+<div class="background-image"></div>
 {% endblock %}
 {% block content %}
+   <section class="section-hero">
+    <h1>FIND YOUR <br>DREAMS</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our <br>catalog will surprise you. Kather, discover an unprecendenced orrers or luxury properdes.</p>
+    <a href=""><button>Explore properties</button></a>
+
+   </section>
 
 {% endblock %}
+{% block footer-content %}
+
+ <footer>
+    <div class="footer-bar">
+        <div class="home">
+            <a href="#"><span class="material-symbols-outlined home-icon">home</span></a>
+            <p>HOME</p>
+        </div>
+
+        <div class="Properties">
+            <a href="#"><span class="material-symbols-outlined factory-icon">factory</span></a>
+            <p>PROPERTIES</p>
+        </div>
+        <div class="hotel">
+            <a  href="#"><span class="material-symbols-outlined hotel-icon">hotel</span></a>
+            <p>hotel</p>
+        </div>
+        <div class="villa">
+        <a  href="#"><span class="material-symbols-outlined villa-icon">villa</span></a>
+        <p>VILLA</p>
+        </div>
+    </div>
+</footer>
+  
+{% endblock %}
+
