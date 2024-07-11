@@ -1,0 +1,32 @@
+{% extends "RealstateClone/base.html" %}
+{% load static %}
+
+{% block content %}
+    <img class="background-img" src="{% static 'images/email.jpg' %}">
+
+    <div class="content-home-padding">
+        <h1 class="bold-font-prop">CONTACT US</h1>
+
+        <div class="row">
+            <div class="contact-info">
+                <h2>TELEPHONE: <a class="contact-link" href="tel:+9660549970539">+9660549970539</a></h2><br>
+                <h2>EMAIL: <a class="contact-link" href="mailto:abdullahInTuwaiq@gmail.com">abdullahInTuwaiq@gmail.com</a></h2><br>
+                <h2>ADDRESS: <br><br>
+                    <p style="font-size: small;">
+                        Kingdom of Saudi Arabia - Riyadh <br>
+                        District: King Khalid International Airport <br>
+                        Princess Nourah Bint Abdul Rahman University 
+                    </p>
+                </h2>
+            </div>
+            
+            <div class="map-container">
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1810.1539078448845!2d46.71170533923792!3d24.85333437641443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2sTuwaiq%20Academy!5e0!3m2!1sen!2ssa!4v1680601816319!5m2!1sen!2ssa"
+                    height="400" class="w-full border-0 rounded-2xl" allowfullscreen="true" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Academy Location">
+                </iframe>
+            </div>
+        </div>
+    </div>
+{% endblock %}

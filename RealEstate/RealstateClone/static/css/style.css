@@ -1,22 +1,171 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Phudu', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(208, 208, 208);
+}
+
+.bold-font {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bold-font:hover {
+    color: red;
 }
 
 .nav-content {
     padding: 2rem;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-
-img {
+.background-img {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     z-index: -1;
-  }
+}
+
+.nav-link {
+    padding: 3px 15px;
+    backdrop-filter: blur(5px);
+    color: black;
+    border-radius: 9999px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0;
+}
+
+.person-icon {
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.signup {
+    color: black;
+}
+
+.padding-container-main {
+    padding: 0 30px;
+}
+
+.bold-font-Find {
+    padding-left: 3.6rem;
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.content-home-padding {
+    padding-left: 190px;
+}
+
+.content-homepage {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.home-button {
+    display: flex;
+}
+
+.home-button button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.home-button button:hover {
+    background-color: #333;
+}
+
+.no-padding {
+    display: flex;
+    margin: 5px;
+    height: 25px;
+}
+
+.padding-container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Adding padding for space between elements */
+}
+
+.nav-size {
+    max-width: 1200px; /* Maximum width for the navbar */
+    width: 50%;
+    margin: 0 auto; /* Center the navbar */
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.icon-container img {
+    width: 70%; /* Adjust the icon size */
+    height: 70%; /* Adjust the icon size */
+}
+
+.person-icon-home {
+    background-color: green;
+}
+
+.person-icon-pro {
+    background-color: rgb(255, 215, 141);
+}
+
+.person-icon-bed {
+    background-color: rgba(255, 110, 255, 0.796);
+}
+
+.person-icon-villa {
+    background-color: rgb(65, 65, 255);
+}
+
+/* Additional styling for navbar items */
+nav ul {
+    width: 100%;  /* Ensure ul takes full width of the navbar */
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;  /* Space between icon and text */
+    width: 100%;  /* Ensure anchor takes full width */
+    padding: 10px 0;
+}
+
+nav ul li a p {
+    margin: 0;
+}
+
+/* PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES */
+
+/* Add your specific properties styles here */

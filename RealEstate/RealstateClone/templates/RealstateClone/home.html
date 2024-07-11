@@ -1,12 +1,65 @@
 {% extends "RealstateClone/base.html" %}
-
 {% load static %}
-{% block content %}
 
-<div class="card">
-    <h1>hhhhh</h1>
-    <p>This is the content of the card.</p>
+{% block content %}
+<img class="background-img" src="{% static '/images/skyscraper.jpeg'%}">
+
+<div class="scale-up-left">
+    <h1 class="bold-font-Find">FIND YOUR <br> DREAMS</h1>
 </div>
 
-  
+
+
+<div class="content-home-padding">
+
+    <div class="content-homepage">
+        <p>
+            Our catalog will surprise you. Rather, discover unprecedented offers of luxury properties. Our <br> catalog will surprise you. Rather, discover unprecedented offers of luxury properties.
+        </p>
+    </div>
+
+    <br><br>
+
+    <div class="home-button">
+        <button><a href="{% url 'RealstateClone:properties' %}">Explore Properties</a></button>
+    </div>
+</div>
+
+
+
+<div class="padding-container-footer">
+    <div class="container flex flex-row justify-center my-3 py-2 backdrop:blur-lg">
+        <nav class="shadow-lg flex items-center gap-3 px-0 p-1 border text-white rounded-full bg-white nav-size">
+            <ul class="flex flex-row items-center gap-6 p-0 w-full justify-evenly">
+                <li>
+                    <a href="{% url 'RealstateClone:home' %}" class="nav-link">
+                        <div class="icon-container person-icon-home"><img src="{% static 'images/home.png' %}" alt=""></div>
+                        <p style="color: green;">ALL</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">
+                        <div class="icon-container person-icon-pro"><img src="{% static 'images/pro.png' %}" alt=""></div>
+                        <p style="color:rgb(255, 215, 141);">PROPERTIES</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">
+                        <div class="icon-container person-icon-bed"><img src="{% static 'images/bed.png' %}" alt=""></div>
+                        <p style="color: rgba(255, 110, 255, 0.796);;">HOTEL</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="nav-link">
+                        <div class="icon-container person-icon-villa"><img src="{% static 'images/villa.png' %}" alt=""></div>
+                        <p style="color: rgb(65, 65, 255);">VILLA</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+
 {% endblock %}
