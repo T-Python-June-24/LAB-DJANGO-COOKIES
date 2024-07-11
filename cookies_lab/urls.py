@@ -8,4 +8,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('dark_mode/', views.dark_mode, name='dark_mode'),
     path('light_mode/', views.light_mode, name='light_mode'),
+    path('properties/', views.properties, name='properties'),
+    path('contact/', views.contact, name='contact'),
 ]

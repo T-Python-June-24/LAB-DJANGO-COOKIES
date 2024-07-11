@@ -1,0 +1,49 @@
+{% extends 'cookies_lab/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  .background-image {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url('{% static "images/email.jpg" %}');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding-top: 120px;
+  }
+</style>
+
+{{ block.super }}
+<div class="content-wrapper">
+  <div class="container mx-auto px-8 py-6">
+    <h1 class="text-4xl font-medium mb-8 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %}">
+      Our Properties
+    </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      {% for property in properties %}
+      <div class="rounded-lg overflow-hidden shadow-lg bg-white">
+        <div class="relative pb-[75%]">
+          <img src="{% static 'images/'|add:property.image %}" alt="{{ property.title }}" class="absolute inset-0 w-full h-full object-cover">
+        </div>
+        <div class="px-6 py-4">
+          <h2 class="font-bold text-xl mb-2">{{property.title}}</h2>
+          <div class="flex justify-end mt-4">
+            <button class="bg-black text-white font-bold py-2 px-4 rounded-full text-sm">
+              more
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

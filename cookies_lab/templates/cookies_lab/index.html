@@ -1,65 +1,108 @@
-{% extends 'cookies_lab/base.html' %}
-{% load static %}
-{% block content %}
-
+{% extends 'cookies_lab/base.html' %} {% load static %} {% block content %}
 <style>
-  .bg-image {
-    background-image: url("{% if 'mode' in request.COOKIES %}{% static 'images/skyscraper-dark.jpg' %}{% else %}{% static 'images/skyscraper.jpeg' %}{% endif %}");
+  .background-image {
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    {% if 'mode' in request.COOKIES %}
+        background-image: url('{% static "images/skyscraper-dark.jpg" %}');
+    {% else %}
+        background-image: url('{% static "images/skyscraper.jpeg" %}');
+    {% endif %}
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    object-fit: cover;
+  }
+  .content-wrapper {
+    padding-top: 200px; /* Adjust this value based on your navbar height */
+    position: relative;
+    z-index: 2;
   }
 </style>
 
-<div class="w-full h-[90vh] relative bg-image">
-  {% include 'cookies_lab/navbar.html' %}
-  <div
-    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2"
-  >
-    <div class="{% if 'mode' in request.COOKIES %}bg-[#282828]{% else %}bg-white{% endif %} rounded-full shadow-lg px-24 py-4">
-      <ul class="flex space-x-16">
-        <li>
-          <button class="flex flex-col items-center">
-            <div class="{% if 'mode' in request.COOKIES %}bg-green-800{% else %}bg-green-200{% endif %} p-3 rounded-full mb-2">
-              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-green-300{% else %}text-green-600{% endif %}">
-                house
-              </span>
-            </div>
-            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-green-300{% else %}text-green-600{% endif %}">ALL</span>
-          </button>
-        </li>
-        <li>
-          <button class="flex flex-col items-center">
-            <div class="{% if 'mode' in request.COOKIES %}bg-yellow-800{% else %}bg-yellow-200{% endif %} p-3 rounded-full mb-2">
-              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-yellow-300{% else %}text-yellow-600{% endif %}">
-                factory
-              </span>
-            </div>
-            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-yellow-300{% else %}text-yellow-600{% endif %}">PROPERTIES</span>
-          </button>
-        </li>
-        <li>
-          <button class="flex flex-col items-center">
-            <div class="{% if 'mode' in request.COOKIES %}bg-pink-800{% else %}bg-pink-200{% endif %} p-3 rounded-full mb-2">
-              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-pink-300{% else %}text-pink-600{% endif %}">
-                hotel
-              </span>
-            </div>
-            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-pink-300{% else %}text-pink-600{% endif %}">HOTEL</span>
-          </button>
-        </li>
-        <li>
-          <button class="flex flex-col items-center">
-            <div class="{% if 'mode' in request.COOKIES %}bg-blue-800{% else %}bg-blue-200{% endif %} p-3 rounded-full mb-2">
-              <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %}text-blue-300{% else %}text-blue-600{% endif %}">
-                villa
-              </span>
-            </div>
-            <span class="text-sm font-medium {% if 'mode' in request.COOKIES %}text-blue-300{% else %}text-blue-600{% endif %}">VILLA</span>
-          </button>
-        </li>
-      </ul>
+<div class="background-image"></div>
+{{ block.super }}
+
+<div class="content-wrapper max-w-7xl mx-auto">
+  <main class="flex-grow flex items-start">
+    <div class="max-w-2xl">
+      <h1
+        class="text-[9rem] leading-tight font-medium mb-4 {% if 'mode' in request.COOKIES %}text-white{% else %}text-black{% endif %} slide-in-elliptic-right-fwd cursor-pointer"
+        onclick="location.reload();"
+      >
+        FIND YOUR DREAMS
+      </h1>
+      <p
+        class="mb-6 text-sm small-text-font {% if 'mode' in request.COOKIES %}text-gray-300{% else %}text-black{% endif %}"
+      >
+        Our catalog will surprise you. Rather, discover an unprecedented offers
+        of luxury properties. Our catalog will surprise you. Rather, discover an
+        unprecedented offers of luxury properties.
+      </p>
+      <button
+        class="bg-black text-white px-8 py-1 rounded-full hover:bg-gray-800 small-text-font"
+      >
+        Explore Properties
+      </button>
     </div>
+  </main>
+</div>
+
+<div
+  class="fixed bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 mb-24 z-1"
+>
+  <div
+    class="{% if 'mode' in request.COOKIES %}bg-[#282828]{% else %}bg-white{% endif %} rounded-full shadow-lg px-24 py-4"
+  >
+    <ul class="flex space-x-16">
+      <li>
+        <button class="flex flex-col items-center">
+          <div
+            class="bg-green-200 p-3 rounded-full mb-2 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-green-600">
+              house
+            </span>
+          </div>
+          <span class="text-sm font-medium text-green-600">ALL</span>
+        </button>
+      </li>
+      <li>
+        <a href="{% url 'cookies_lab:properties' %}" class="flex flex-col items-center">
+          <div
+            class="bg-yellow-200 p-3 rounded-full mb-2 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-yellow-600">
+              factory
+            </span>
+          </div>
+          <span class="text-sm font-medium text-yellow-600">PROPERTIES</span>
+        </a>
+      </li>
+      <li>
+        <button class="flex flex-col items-center">
+          <div
+            class="bg-pink-200 p-3 rounded-full mb-2 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-pink-600"> hotel </span>
+          </div>
+          <span class="text-sm font-medium text-pink-600">HOTEL</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex flex-col items-center">
+          <div
+            class="bg-blue-200 p-3 rounded-full mb-2 flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-blue-600"> villa </span>
+          </div>
+          <span class="text-sm font-medium text-blue-600">VILLA</span>
+        </button>
+      </li>
+    </ul>
   </div>
 </div>
+
 {% endblock %}
