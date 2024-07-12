@@ -10,16 +10,14 @@
 body {
 
     background: url('../images/skyscraper.jpeg') no-repeat;
-    background-size: cover; 
+    background-size: cover;
     font-family: "Phudu", sans-serif;
     font-weight: 100;
-    font-style: normal;
     color: rgb(25, 24, 24);
     width: 100%;
-    /* margin: 5rem; */
+    height: 100%;
     text-transform: capitalize;
-    
-    
+    position: absolute;
     
 }
 
@@ -109,7 +107,7 @@ section div {
 }
 /* hover title */
 .title:hover {  
-
+    animation: 3s ease-in 1s infinite reverse both running slidein;
 }
 
 .btn {
@@ -124,116 +122,35 @@ section div {
 
 footer {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
     font-weight: 400;
     text-transform: uppercase;
     position: absolute;
     bottom: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
-    height: 10%;
-    background-color: #f0f0f0;
-
+    height: 15%;
+    justify-content: center;
 }
 
-.footer-nav-bar{
-    
-    position: relative;
-    padding: 1rem 0 1rem 0;
-    bottom: 40px;
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.copy-right {
+    background-color:#31363F;
+    color: white;
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    border-radius: 6rem;
-    box-shadow: 0px 0px 3px rgb(132, 124, 124);
-    padding: .9rem;
-    background-color: #fff;
-    width: 50%;
-    height: fit-content;
-    z-index: 2;
-    
-
+    justify-content: center;
+    gap: .8rem;
 }
 
-.footer-nav-bar div{
-    margin: 0 2rem 0 2rem;
-
-}
-
-.footer-nav-bar a {
-    text-decoration: none;
-
-}
-
-.footer-nav-bar a span {
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.footer-nav-bar a {
-
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.all {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: hsl(153, 47%, 36%);
-
-}
-.factory {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #6F4E37;
-}
-.hotel {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #DC0083;
-}
-.villa {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #0F67B1;
-}
-
-.all a , .all span{
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #9DDE8B;
-    color: #00780a;
-}
-.factory a , .factory span {
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #DEAC80;
-    color: #6F4E37;
-}
-.hotel a, .hotel span  {
-    padding: 10px;
-    border-radius: 50%;
-    background-color: #FF7EE2;
-    color: #DC0083;
-}
-
-.villa a , .villa span{
-    padding: 10px;
-    background-color: lightblue;
-    border-radius: 50%;
-    color: #0F67B1;
+.copy-right p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }

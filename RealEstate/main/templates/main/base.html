@@ -19,11 +19,11 @@
                 <h1>home</h1>
             </div>
             <div class="header-nav-bar">
-                <a href="#">home</a>
-                <a href="#">properites</a>
+                <a href="{% url 'main:home_page' %}">home</a>
+                <a href="{% url 'main:properties_page' %}">properites</a>
                 <a href="#">services</a>
                 <a href="#">about</a>
-                <a href="#">contact</a>
+                <a href="{% url 'main:contact_page' %}">contact</a>
             </div>
             <div class="header-nav-bar-icons">
                 <a href="#">
@@ -54,7 +54,21 @@
         {% endblock %}
     </main>
     <footer>
-        
+        <div class="footer">
+            {%block navbar %}
+            {% endblock %}
+        </div>
+        <div class="copy-right">
+            <p>
+                <span class="material-symbols-outlined">
+                    copyright
+                </span>
+
+            </p>
+            <p>
+                2024 Amirah. All rights reserved
+            </p>
+        </div>
     </footer>
 
 </body>

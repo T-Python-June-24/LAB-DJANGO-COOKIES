@@ -1,0 +1,123 @@
+footer {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 400;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+}
+
+.footer {
+
+    display: flex;
+    justify-content: center;
+    height: 70%;
+
+}
+.footer-nav-bar{
+    
+    position: relative;
+    padding: 1rem 0 1rem 0;
+    bottom: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 6rem;
+    box-shadow: 0px 0px 3px rgb(132, 124, 124);
+    padding: .9rem;
+    background-color: #fff;
+    width: 50%;
+    height: fit-content;
+    z-index: 2;
+    
+
+}
+
+.footer-nav-bar div{
+    margin: 0 2rem 0 2rem;
+
+}
+
+.footer-nav-bar a {
+    text-decoration: none;
+
+}
+
+.footer-nav-bar a span {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.footer-nav-bar a {
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.all {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: hsl(153, 47%, 36%);
+
+}
+.factory {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #6F4E37;
+}
+.hotel {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #DC0083;
+}
+.villa {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #0F67B1;
+}
+
+.all a , .all span{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #9DDE8B;
+    color: #00780a;
+}
+.factory a , .factory span {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #DEAC80;
+    color: #6F4E37;
+}
+.hotel a, .hotel span  {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #FF7EE2;
+    color: #DC0083;
+}
+
+.villa a , .villa span{
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 50%;
+    color: #0F67B1;
+}
+

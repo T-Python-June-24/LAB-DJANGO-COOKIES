@@ -1,0 +1,30 @@
+{% extends 'main/base.html'%}
+{%load static%}
+{%block title %} Contact us {%endblock%}
+{%block styleFile %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}"> {%endblock%}
+{%block content %}
+
+<section>
+    <h1 class="OUR-PROPERTIES">our properties</h1>
+
+    <div class="properties-wrapper">
+        {% for i in properties_list %}
+        <div class="property-card">
+            <img src="{% static i.image %}" alt="{{ i.title }}">
+
+            <div>
+                {{ i.title }}
+
+            </div>
+            <div>
+                <br><a href="#" class="btn">more</a>
+
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{%endblock%}

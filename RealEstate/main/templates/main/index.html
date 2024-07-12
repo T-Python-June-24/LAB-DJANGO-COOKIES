@@ -1,65 +1,66 @@
 {% extends 'main/base.html'%}
-{%block title %} Home  {%endblock%}
-
+{%load static %}
+{%block title %} Home {%endblock%}
+{%block styleFile %}<link rel="stylesheet" href="{% static 'css/index.css' %}"> {%endblock%}
 {%block content %}
 
-    <section>
-        <div class="title">
+<section>
+    <div class="title">
 
-            <h1>
-                find your  <br> dreams
+        <h1>
+            find your <br> dreams
 
-            </h1>
-        </div>
-        <div class="paragraph">
-            <pre>our catalog will suprise you. rather, discover an unprecendnted offers of luxury properties.our 
+        </h1>
+    </div>
+    <div class="paragraph">
+        <pre>our catalog will suprise you. rather, discover an unprecendnted offers of luxury properties.our 
 catalog will suprise you. rather, discover an unprecendnted offers of luxury properties.</pre>
-        </div>
-        <div>
-            <a href="#" class="btn">
-                expolore properites
+    </div>
+    <div>
+        <a href="{% url 'main:properties_page' %}" class="btn">
+            expolore properites
 
-            </a>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-nav-bar">
-            <div class="all">
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        house
-                    </span>
-                </a>
-                <p>all</p>
-
-            </div>
-            <div class="factory">
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        factory
-                    </span>
-                </a>
-                <p>properties</p>
-
-            </div>
-            <div class="hotel">
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        hotel
-                    </span>
-                </a>
-                <p>hotel</p>
-
-            </div>
-            <div class="villa">
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        villa
-                    </span>
-                </a>
-                <p>villa</p>
-            </div>
-        </div>
-    </footer>
-
+        </a>
+    </div>
+</section>
 {%endblock%}
+
+{%block navbar %}
+<div class="footer-nav-bar">
+    <div class="all">
+        <a href="{% url 'main:properties_page' %}">
+            <span class="material-symbols-outlined">
+                house
+            </span>
+        </a>
+        <p>all</p>
+
+    </div>
+    <div class="factory">
+        <a href="{% url 'main:properties_page' %}">
+            <span class="material-symbols-outlined">
+                factory
+            </span>
+        </a>
+        <p>properties</p>
+
+    </div>
+    <div class="hotel">
+        <a href="{% url 'main:properties_page' %}">
+            <span class="material-symbols-outlined">
+                hotel
+            </span>
+        </a>
+        <p>hotel</p>
+
+    </div>
+    <div class="villa">
+        <a href="{% url 'main:properties_page' %}">
+            <span class="material-symbols-outlined">
+                villa
+            </span>
+        </a>
+        <p>villa</p>
+    </div>
+</div>
+{% endblock %}

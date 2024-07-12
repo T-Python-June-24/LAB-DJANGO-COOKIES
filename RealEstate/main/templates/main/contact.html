@@ -1,34 +1,33 @@
 {% extends 'main/base.html'%}
-{%block title %} Contact us  {%endblock%}
-
+{%load static%}
+{%block title %} Contact us {%endblock%}
+{%block styleFile %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}"> {%endblock%}
 {%block content %}
 
-    <section>
+<section>
+    <h1>contact us</h1>
+    <div class="wrapper">
         <div class="contact-info">
-            <h1>contact us</h1>
-            <div class="telephone">
-                <span>telephone:</span>
-                <span>96555555555</span>
+            <p>telephone: <a href="tel:+9665559988986">+966 534567890</a></p>
 
-            </div>
-            
-            <div class="email">
-
-                <span>email:</span>
-                <span>96555555555</span>
-            </div>
-            <div class="address">
-                <h2>address:</h2>
-                <p>ee</p>
-                <p>ee</p>
-                <p>ee</p>
-
-            </div>
+            <p>email:<a href="mailto:info@example.com">info@example.com</a></p>
+            <p>address:</p>
+            <pre>
+anas bin malik, riyadh 
+bulding w-112 
+saudi arabia
+            </pre>
 
         </div>
         <div class="google-map">
-
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.1095488799647!2d46.73635531189309!3d24.791702065615528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efddc792f0dd7%3A0xe8143ae6e6a2fc1d!2sMelissa%20Hotel%20Riyadh!5e0!3m2!1sen!2ssa!4v1720729011577!5m2!1sen!2ssa"
+                style="border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
-    </section>
+
+    </div>
+</section>
 
 {%endblock%}
