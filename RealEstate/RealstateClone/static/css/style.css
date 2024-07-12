@@ -52,7 +52,7 @@ html.dark .bold-font:hover {
 }
 
 .background-img {
-    position: fixed; 
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
@@ -73,7 +73,7 @@ html.dark .bold-font:hover {
 
 
 .nav-link {
-    padding: 3px 15px;
+    padding: 0.3rem 0.15rem;
     backdrop-filter: blur(5px);
     color: black;
     border-radius: 9999px;
@@ -125,7 +125,6 @@ html.dark .signup {
 }
 
 .bold-font-Find {
-    padding-left: 0.0rem;
     font-size: 6rem;
     font-weight: bold;
     margin: 0;
