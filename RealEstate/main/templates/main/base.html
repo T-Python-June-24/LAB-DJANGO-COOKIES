@@ -35,10 +35,13 @@
             <span class="material-symbols-outlined">person</span>
             <a href="">sign up</a>
             <div class="mode-icons-container">
-              <a href="{% url 'main:light_mode' %}"><span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} light-mode {% endif %}">light_mode</span></a>
-              <a href="{% url 'main:dark_mode' %}"><span class="material-symbols-outlined large-icon {% if 'mode' in request.COOKIES %} dark-mode {% endif %}">dark_mode</span></a>
+              <a href="{% url 'main:dark_mode' %}">
+                  <span class="material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}dark-mode{% endif %}">dark_mode</span>
+              </a>
+              <a href="{% url 'main:light_mode' %}">
+                  <span class="material-symbols-outlined {% if request.COOKIES.mode != 'dark' %}light-mode{% endif %}">light_mode</span>
+              </a>
           </div>
-
 
         </nav>
         

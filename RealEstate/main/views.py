@@ -19,11 +19,11 @@ def property_list(request):
 from django.shortcuts import redirect
 
 def dark_mode(request):
-    response = redirect("main:home_page")
+    response = redirect(request.META.get('HTTP_REFERER', '/'))  
     response.set_cookie("mode", "dark", max_age=60*60*24*365)  
     return response
 
 def light_mode(request):
-    response = redirect("main:home_page")
-    response.delete_cookie("mode")  
+    response =  redirect(request.META.get('HTTP_REFERER', '/'))  
+    response.delete_cookie("mode")
     return response
