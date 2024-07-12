@@ -24,7 +24,7 @@
         
         <nav class="bar">
             <a href="{% url 'main:home_page' %}">Home</a>
-            <a href="">Properties</a>
+            <a href="{% url 'main:property_list' %}">Properties</a>
             <a href="">Services</a>
             <a href="">About</a>
             <a href="{% url 'main:contact_page' %}" >Contact</a>
@@ -49,7 +49,7 @@
   </main> 
   <footer>
     <div class="footer-bar">
-  {% block footer-content %}
+      {% block footer-content %}
 
   {% endblock %}
     </div>
