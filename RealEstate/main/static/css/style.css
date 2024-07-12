@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Phudu', sans-serif;
+}
+
+
+.home-background {
+    background-image: url('../images/skyscraper.jpeg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.navbar {
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 10;
+    margin-top: 42px;
+}
+ .navbar-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:50px;
+    flex-direction: row;
+ }
+ .navbar-container-logo{
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+
+ }
+
+ .navbar-main{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 550px;
+    height: 70px;
+    gap: 48px;
+    padding: 5px;
+    background-color: white;
+
+    border-radius: 40px;
+ }
+ .navbar-main a{
+    color: black;
+    text-decoration: none;
+ }
+ .navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 144px;
+ }
+.navbar-right span{
+    text-decoration: none;
+    color: black;
+}
+.navbar-right a {
+    text-decoration: none;
+    color: black;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+}
+.home-content h1{
+    font-size: 100px;
+}
+.home-content-btn{
+    width: 185px;
+    margin: 15PX;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 83px;
+    font-size: 1rem;
+    color:white;
+}
+.bottom-navbar{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 94px;
+    background: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 80px;
+    align-items: center;
+}
+.house-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.house-a div{ 
+    background-color: rgb(158, 218, 113);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.house-a span{ 
+    color: rgb(98, 211, 98);
+}
+
+
+.properties-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.properties-a div{ 
+    background-color: antiquewhite;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.properties-a span{ 
+    color: rgb(211, 169, 114);
+}
+.hotel-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.hotel-a div{ 
+    background-color: pink;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hotel-a span{ 
+    color: rgb(205, 41, 68);
+}
+
+.villa-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.villa-a div{ 
+    background-color: rgb(135, 166, 216);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.villa-a span{ 
+    color: rgb(135, 166, 216);
+}
+
+
+footer{
+    position:static;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+} 
