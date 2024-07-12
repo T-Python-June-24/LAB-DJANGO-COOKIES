@@ -5,5 +5,30 @@ Home Page
 {% load static %}
 {% block content %}
   <main class="home-container">
+    <div>
+      <h1>FIND YOUR DREAMS</h1>
+      <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+      <a href="{% url 'main:properties_view' %}">Explore Properties</a>
+    </div>
   </main>
+  <footer>
+    <div>
+      <div>
+        <span class="material-symbols-outlined">home</span>
+        <a>ALL</a>
+      </div>
+      <div>
+        <span class="material-symbols-outlined">factory</span>
+        <a href="{% url 'main:properties_view' %}">PROPERTIES</a>
+      </div>
+      <div>
+        <span class="material-symbols-outlined">hotel</span>
+        <a href="">HOTEL</a>
+      </div>
+      <div>
+        <span class="material-symbols-outlined">villa</span>
+        <a href="">VILLA</a>
+      </div>
+    </div>
+  </footer>
 {% endblock %}
