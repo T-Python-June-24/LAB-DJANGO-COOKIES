@@ -1,19 +1,17 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if 'mode' in request.COOKIES %} class="dark" {% endif %}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Abdullah{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/animation.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/properties.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/properties.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu&display=swap">
 </head>
 <body>
@@ -21,47 +19,33 @@
         <h2 class="bold-font"><a href="{% url 'RealstateClone:home' %}">HOME</a></h2>
         <div class="padding-container-main">
             <div class="container flex flex-row justify-center my-3 py-3 backdrop:blur-lg">
-                <nav class="shadow-lg flex items-center gap-6 px-3 py-3 border text-white rounded-full bg-white">
+                <nav class="nav-bar shadow-lg flex items-center gap-6 px-3 py-3 border rounded-full">
                     <ul class="flex flex-row items-center gap-16 m-0">
                         <li class="pl-16">
-                            <a href="{% url 'RealstateClone:home' %}"
-                                class="px-3 backdrop:blur-md hover:backdrop:blur-lg py-3 hover:transparent text-black hover:bg-slate-100 ease-in-out rounded-full transition-all cursor-pointer">
-                                Home
-                            </a>
+                            <a href="{% url 'RealstateClone:home' %}" class="nav-link">Home</a>
                         </li>
                         <li>
-                            <a href="{% url 'RealstateClone:properties' %}"
-                                class="px-3 backdrop:blur-md py-3 hover:transparent text-black hover:bg-slate-100 ease-in-out rounded-full transition-all cursor-pointer">
-                                Properties
-                            </a>
+                            <a href="{% url 'RealstateClone:properties' %}" class="nav-link">Properties</a>
                         </li>
                         <li>
-                            <a href=""
-                                class="px-3 backdrop:blur-md py-3 hover:transparent text-black hover:bg-slate-100 ease-in-out rounded-full transition-all cursor-pointer">
-                                Services
-                            </a>
+                            <a href="" class="nav-link">Services</a>
                         </li>
                         <li>
-                            <a href=""
-                                class="px-3 backdrop:blur-md py-3 hover:transparent text-black hover:bg-slate-100 ease-in-out rounded-full transition-all cursor-pointer">
-                                About
-                            </a>
+                            <a href="" class="nav-link">About</a>
                         </li>
                         <li class="pr-16">
-                            <a href="{% url 'RealstateClone:contact' %}"
-                                class="px-3 backdrop:blur-md py-3 hover:transparent text-black hover:bg-slate-100 ease-in-out rounded-full transition-all cursor-pointer">
-                                Contact
-                            </a>
+                            <a href="{% url 'RealstateClone:contact' %}" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
+
         <div class="no-padding">
-            <div><a href=""><img class="person-icon" src="{% static '/images/person.png' %}" alt=""></a></div>
+            <div><a href=""><img class="person-icon" src="{% static 'images/person.png' %}" alt="icon"></a></div>
             <div style="margin-right: 10px;"><a href="">Sign Up</a></div>
-            <div><a href=""><img class="person-icon" src="{% static '/images/dark_mode.png' %}" alt=""></a></div>
-            <div><a href=""><img class="person-icon" src="{% static '/images/light_mode.png' %}" alt=""></a></div>
+            <div><a href="{% url 'RealstateClone:home_dark' %}"><img class="person-icon" src="{% static 'images/dark_mode.png' %}" alt="icon"></a></div>
+            <div><a href="{% url 'RealstateClone:home_light' %}"><img class="person-icon" src="{% static 'images/light_mode.png' %}" alt="icon"></a></div>
         </div>
     </div>
 

@@ -6,6 +6,11 @@ body {
     background-color: rgb(208, 208, 208);
 }
 
+html.dark {
+    background-color: #333;
+    color: white;
+}
+
 .bold-font {
     font-size: 4rem;
     font-weight: bold;
@@ -13,6 +18,23 @@ body {
 }
 
 .bold-font:hover {
+    color: red;
+    animation: bold-font-animation 1s ease-in-out;
+}
+
+@keyframes bold-font-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+html.dark .bold-font:hover {
     color: red;
 }
 
@@ -28,6 +50,17 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.light-bg {
+    background-image: url("/static/images/skyscraper.jpeg");
+}
+
+.dark-bg {
+    background-image: url("/static/images/skyscraper-dark.jpg");
 }
 
 .nav-link {
@@ -39,7 +72,13 @@ body {
 }
 
 .nav-link:hover {
-    background-color: #f0f0f0;
+ color: teal;
+    animation: bold-font-animation 1s ease-in-out;
+
+}
+
+html.dark .nav-link {
+    color: white;
 }
 
 .person-icon {
@@ -50,6 +89,10 @@ body {
 
 .signup {
     color: black;
+}
+
+html.dark .signup {
+    color: white;
 }
 
 .padding-container-main {
@@ -71,6 +114,10 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     color: #333;
+}
+
+html.dark .content-homepage {
+    color: #ccc;
 }
 
 .home-button {
@@ -103,11 +150,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0; 
+    padding: 0;
 }
 
 .nav-size {
-    max-width: 1200px; 
+    max-width: 1200px;
     width: 50%;
     margin: 0 auto;
 }
@@ -123,8 +170,8 @@ body {
 }
 
 .icon-container img {
-    width: 70%; 
-    height: 70%; 
+    width: 70%;
+    height: 70%;
 }
 
 .person-icon-home {
@@ -143,9 +190,8 @@ body {
     background-color: rgb(65, 65, 255);
 }
 
-
 nav ul {
-    width: 100%;  
+    width: 100%;
 }
 
 nav ul li {
@@ -157,8 +203,8 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;  
-    width: 100%;  
+    gap: 8px;
+    width: 100%;
     padding: 10px 0;
 }
 
@@ -166,6 +212,13 @@ nav ul li a p {
     margin: 0;
 }
 
-/* PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES PROPERTIES */
+/* Navigation Bar Colors */
+.nav-bar {
+    background-color: white;
+    color: black;
+}
 
-/* Add your specific properties styles here */
+html.dark .nav-bar {
+    background-color: black;
+    color: white;
+}

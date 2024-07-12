@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 
 
@@ -26,3 +26,30 @@ def propertiesPage(request):
 def contact(request):
     return render(request,'RealstateClone/contact.html')
 
+
+def home_light(request):
+    response = redirect('RealstateClone:home')
+    response.set_cookie('mode', 'dark', max_age=-3600)
+    return response
+
+def home_dark(request):
+    response = redirect('RealstateClone:home')
+    response.set_cookie('mode', 'dark', max_age=60*60*24*365*2)
+    return response
+
+
+# def propertiesPage_dark(request):
+#     response = redirect('RealstateClone:propertiesPage')
+#     response.set_cookie('dark', 'mode', max_age=60*60*24*365*2)
+#     return response
+
+# def contact_light(request):
+#     response = redirect('RealstateClone:contact')
+#     response.set_cookie('light', 'mode', max_age=-1000)
+#     return response
+
+
+# def contact_dark(request):
+#     response = redirect('RealstateClone:contact')
+#     response.set_cookie('dark', 'mode', max_age=60*60*24*365*2)
+#     return response
