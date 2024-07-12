@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 from django.http import HttpRequest,HttpResponse
 
 def home_page(request):
@@ -14,3 +14,16 @@ def property_list(request):
         {"title": "Amazing Villa in Hitten", "image": "images/villa4.jpg"},
     ]
     return render(request, 'main/properties.html', {'properties': properties})
+
+
+from django.shortcuts import redirect
+
+def dark_mode(request):
+    response = redirect("main:home_page")
+    response.set_cookie("mode", "dark", max_age=60*60*24*365)  
+    return response
+
+def light_mode(request):
+    response = redirect("main:home_page")
+    response.delete_cookie("mode")  
+    return response

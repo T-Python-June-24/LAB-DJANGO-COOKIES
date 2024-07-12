@@ -2,8 +2,12 @@
 {%load static%}
 
 {% block background-content %}
-<div class="background-image" style="background-image: url('/static/images/skyscraper.jpeg');"></div>
 
+{% if  'mode' in request.COOKIES %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper-dark.jpg');"></div>
+{% else %}
+ <div class="background-image" style="background-image: url('/static/images/skyscraper.jpeg');"></div>
+{% endif %}
 {% endblock %}
 {% block content %}
    <section class="section-hero">

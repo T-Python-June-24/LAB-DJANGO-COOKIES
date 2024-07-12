@@ -1,7 +1,11 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block background-content %}
+{% if  'mode' in request.COOKIES %}
+<div class="background-image" style=   " background-color: #616060;"></div>
+{% else %}
 <div class="background-image" style=   " background-color: #e7e4e4;"></div>
+{% endif %}
 {% endblock %}
 {% block content %}
 <h2 class="OUR-PROPERTIES">OUR PROPERTIES</h2>

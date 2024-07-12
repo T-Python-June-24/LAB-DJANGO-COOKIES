@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Document</title>
 </head>
-<body>
+<body data-theme="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
   {% block background-content %}
   {% endblock %}
 
@@ -34,8 +34,11 @@
         <nav class="right-nav">
             <span class="material-symbols-outlined">person</span>
             <a href="">sign up</a>
-            <span class="material-symbols-outlined">light_mode</span>
-            <span class="material-symbols-outlined">dark_mode</span>
+            <div class="mode-icons-container">
+              <a href="{% url 'main:light_mode' %}"><span class="material-symbols-outlined {% if not 'mode' in request.COOKIES %} light-mode {% endif %}">light_mode</span></a>
+              <a href="{% url 'main:dark_mode' %}"><span class="material-symbols-outlined large-icon {% if 'mode' in request.COOKIES %} dark-mode {% endif %}">dark_mode</span></a>
+          </div>
+
 
         </nav>
         
