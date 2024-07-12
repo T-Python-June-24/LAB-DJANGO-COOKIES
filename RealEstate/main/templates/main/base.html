@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" {% if 'mode' in  request.COOKIES %} class="dark" {% endif %}>
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+{#    <style>#}
+{#        * {#}
+{#            margin: 0;#}
+{#            padding: 0;#}
+{#        }#}
+{##}
+{#        body {#}
+{#            width: 100vw;#}
+{#            height: 100vh;#}
+{#        }#}
+{##}
+{#        header {#}
+{#            position: fixed;#}
+{#            display: flex;#}
+{#            flex-direction: row;#}
+{#            justify-content: space-between;#}
+{#        }#}
+{##}
+{#        .title {#}
+{#            position: fixed;#}
+{#            display: flex;#}
+{#            flex-direction: row;#}
+{#            justify-content: flex-start;#}
+{#        }#}
+{##}
+{#        nav {#}
+{#            position: fixed;#}
+{#            display: flex;#}
+{#            flex-direction: row;#}
+{#            justify-content: center;#}
+{#        }#}
+{##}
+{#        .controls {#}
+{#            position: fixed;#}
+{#            display: flex;#}
+{#            flex-direction: row;#}
+{#            justify-content: flex-end;#}
+{#        }#}
+{##}
+{#        footer {#}
+{#            position: fixed;#}
+{#            display: flex;#}
+{#            flex-direction: row;#}
+{#            justify-content: center;#}
+{#        }#}
+{##}
+{#        .title {#}
+{#            font-size: 2rem;#}
+{#        }#}
+{##}
+{#        .home-light {#}
+{#            background-image: url("{% static 'images/skyscraper.jpeg' %}") ";#}
+{#        }#}
+{##}
+{#        .home-dark {#}
+{#            background-image: url("{% static 'images/skyscraper-dark.jpg' %}");#}
+{#        }#}
+{##}
+{#        .icon {#}
+{#            width: 1.5rem;#}
+{#            border: solid;#}
+{#        }#}
+{#    </style>#}
+{#    {% block style %}#}
+{##}
+{#    {% endblock %}#}
+</head>
+<body>
+<header>
+    <div class="title">
+        <h1>HOME</h1>
+    </div>
+    <nav>
+        <a title="Home page" href="{% url 'main:home_view' %}">Home</a>
+        <a title="Properties page" href="{% url 'main:properties_view' %}">Properties</a>
+        <a title="Not Implemented" href="#">Services</a>
+        <a title="Not Implemented" href="#">About</a>
+        <a title="Contact page" href="{% url 'main:contact_view' %}">Contact</a>
+    </nav>
+    <div class="controls">
+        <img class="icon" src="{% static 'images/account.png' %}" alt="Account icon">
+        <a title="Not Implemented" href="#">Sign up</a>
+        <a href="{% url 'main:light_mode_view' %}"><img class="icon" src="{% static 'images/light-mode.png' %}" alt="Light mode icon"></a>
+        <a href="{% url 'main:views.dark_mode_view' %}"><img class="icon" src="{% static 'images/dark-mode.png' %}" alt="Dark mode icon"></a>
+    </div>
+</header>
+<footer>
+    All rights reserved
+</footer>
+{% block content %}
+{% endblock %}
+</body>
+</html>

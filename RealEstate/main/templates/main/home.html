@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock %}
+{% block content %}
+    <main class="home-light">
+        <div class="home-middle">
+            <h1>FIND YOUR DREAMS</h1>
+            <p>
+                Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+                Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.
+            </p>
+            <button><a href="{% url 'main:properties_view' %}">Explore Properties</a></button>
+        </div>
+    </main>
+    <aside class="menu">
+        <img class="large-icon" src="{% static 'images/home.png' %}" alt="Home icon">
+        <img class="large-icon" src="{% static 'images/properties.png' %}" alt="Properties icon">
+        <img class="large-icon" src="{% static 'images/hotel.png' %}" alt="Hotel icon">
+        <img class="large-icon" src="{% static 'images/villa.png' %}" alt="Villa icon">
+    </aside>
+{% endblock %}

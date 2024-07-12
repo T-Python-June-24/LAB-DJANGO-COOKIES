@@ -1,0 +1,31 @@
+
+/*header {*/
+/*    position: fixed;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*footer {*/
+/*    position: fixed;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.title {*/
+/*    font-size: 2rem;*/
+/*}*/
+
+/*.home-light {*/
+/*    background-image: url("{% static 'images/skyscraper.jpeg' %}") ";*/
+/*}*/
+
+/*.home-dark {*/
+/*    background-image: url("{% static 'images/skyscraper-dark.jpg' %}");*/
+/*}*/
+
+/*.icon {*/
+/*    width: 1.5rem;*/
+/*    border: solid;*/
+/*}*/
