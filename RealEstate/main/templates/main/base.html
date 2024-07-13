@@ -38,12 +38,12 @@
                     </p>
                 </a>
                 <a href="{% url 'main:light_mode'%}">
-                    <span class="material-symbols-outlined">
+                    <span {% if 'mode' not in request.COOKIES  %} class="material-symbols-outlined active" {% else %} class="material-symbols-outlined " {% endif %}>
                         light_mode
                     </span>
                 </a>
                 <a href="{% url 'main:dark_mode'%}">
-                    <span class="material-symbols-outlined">
+                    <span {% if 'mode' in request.COOKIES  %} class="material-symbols-outlined active-d" {% else %} class="material-symbols-outlined " {% endif %}>
                         dark_mode
                     </span>
                 </a>

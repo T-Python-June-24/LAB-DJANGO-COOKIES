@@ -33,6 +33,15 @@ footer {
     height: 70%;
 
 }
+
+.dark .footer {
+
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    background-color: rgb(20, 19, 19);
+
+}
 .footer-nav-bar{
     
     position: relative;

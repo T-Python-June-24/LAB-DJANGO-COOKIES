@@ -108,6 +108,19 @@ body a {
     font-size: 1.7rem;
 }
 
+.material-symbols-outlined.active {
+
+    background-color: #fff;
+        border-radius: 2rem;
+
+}
+
+.material-symbols-outlined.active-d {
+
+    background-color: rgb(27, 26, 26);
+    border-radius: 2rem;
+}
+
 #sign-up {
     font-size: 1.3rem;
 }
