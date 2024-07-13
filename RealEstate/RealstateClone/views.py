@@ -72,7 +72,7 @@ def home_light(request: HttpResponse):
 
     """
     response = redirect('RealstateClone:home')
-    response.set_cookie('mode', 'dark', max_age=-3600)#!cookie age 
+    response.delete_cookie('mode')#!cookie age 
     return response
 
 def home_dark(request: HttpResponse):
@@ -103,7 +103,8 @@ def propertiesPage_light(request: HttpResponse):
 
     """
     response = render(request, 'RealstateClone/propertiesPage.html', context)
-    response.set_cookie('mode', 'light', max_age=-3600)#!cookie age 
+    response.delete_cookie('mode')#!cookie age 
+    #!also i can use delete cookies 
     return response
 
 def propertiesPage_dark(request: HttpResponse):
