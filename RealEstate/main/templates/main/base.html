@@ -12,20 +12,21 @@
     <title>{% block title%} {% endblock%}</title>
 </head>
 
-<body>
+<body {% block mode %}  {% endblock %}>
     <main>
         <header>
-            <div class="header-logo">
+            <div {% if 'mode'  not in request.COOKIES  %} class="header-logo" {% else %} class = "header-logo-dark" {% endif %}>
                 <h1>home</h1>
             </div>
-            <div class="header-nav-bar">
+            
+            <div {% if 'mode'  not in request.COOKIES  %} class="header-nav-bar" {% else %} class = "dark-h" {% endif %}>
                 <a href="{% url 'main:home_page' %}">home</a>
                 <a href="{% url 'main:properties_page' %}">properites</a>
                 <a href="#">services</a>
                 <a href="#">about</a>
                 <a href="{% url 'main:contact_page' %}">contact</a>
             </div>
-            <div class="header-nav-bar-icons">
+            <div  {% if 'mode'  not in request.COOKIES  %} class="header-nav-bar-icons" {% else %} class="header-nav-bar-icons-dark" {% endif %}>
                 <a href="#">
                     <span class="material-symbols-outlined">
                         person
@@ -36,12 +37,12 @@
                         sign up
                     </p>
                 </a>
-                <a href="#">
+                <a href="{% url 'main:light_mode'%}">
                     <span class="material-symbols-outlined">
                         light_mode
                     </span>
                 </a>
-                <a href="#">
+                <a href="{% url 'main:dark_mode'%}">
                     <span class="material-symbols-outlined">
                         dark_mode
                     </span>

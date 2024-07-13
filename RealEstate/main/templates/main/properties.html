@@ -2,11 +2,20 @@
 {%load static%}
 {%block title %} Contact us {%endblock%}
 {%block styleFile %}
-<link rel="stylesheet" href="{% static 'css/properties.css' %}"> {%endblock%}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}"> 
+{%endblock%}
+
+{% block mode %} 
+
+{% if 'mode' in request.COOKIES  %} class="dark" {% endif %}
+
+{% endblock %}
+
+
 {%block content %}
 
 <section>
-    <h1 class="OUR-PROPERTIES">our properties</h1>
+    <h1>our properties</h1>
 
     <div class="properties-wrapper">
         {% for i in properties_list %}

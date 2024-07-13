@@ -1,3 +1,10 @@
+.dark {
+    background: #2d3037;
+}
+
+.dark h1 {
+    color: #fff;
+}
 
 body{
     position: relative;

@@ -2,6 +2,14 @@
 {%load static %}
 {%block title %} Home {%endblock%}
 {%block styleFile %}<link rel="stylesheet" href="{% static 'css/index.css' %}"> {%endblock%}
+
+{% block mode %} 
+
+{% if 'mode' in request.COOKIES  %} class="dark" {% endif %}
+
+{% endblock %}
+
+
 {%block content %}
 
 <section>

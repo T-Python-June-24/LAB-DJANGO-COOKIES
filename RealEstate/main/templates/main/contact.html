@@ -3,6 +3,12 @@
 {%block title %} Contact us {%endblock%}
 {%block styleFile %}
 <link rel="stylesheet" href="{% static 'css/contact.css' %}"> {%endblock%}
+{% block mode %} 
+
+{% if 'mode' in request.COOKIES  %} class="dark" {% endif %}
+
+{% endblock %}
+
 {%block content %}
 
 <section>
