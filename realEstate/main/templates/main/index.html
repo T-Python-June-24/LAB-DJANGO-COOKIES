@@ -1,0 +1,74 @@
+{% extends 'main/base.html'%}
+{% load static %}
+{% block style %}
+<style>
+  .dark_mode {
+    background: url("{% static 'resources/skyscraper-dark.jpg' %}");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .light_mode{
+    background: url("{% static 'resources/skyscraper.jpeg' %}");
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+  }
+</style>
+{% endblock %}
+{% block main%}
+ <main>
+    <div class="center-content">
+    <div  class="pargarph-head">
+    <h2 {% if 'true' in request.COOKIES.dark_mode %} class="dark-content" {% endif %}>
+        FIND YOUR <br> DREAMS
+    </h2>
+</div>
+<div {% if 'true' in request.COOKIES.dark_mode %} class="pargraph-dark" {% else %} class="pargraph" {% endif %}>
+    <p> Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties. Our catalog will suprise you. Rather, discover an unprecendented offers of luxury properties.
+    </p>   
+</div>
+<div class="">
+    <a href="{% url 'main:properties_views' %}">
+    <input  type="button" value="Expolore Properties" class="properties-btn"></a>
+
+</div>
+</div> <!-- end of of center contnent -->
+<div class="bottom-nav">
+    <div {% if 'true' in request.COOKIES.dark_mode %} class="back-g-dark" {% else %} class="back-g" {% endif %}>
+    
+    <div class="bottom-item" id="all-item">
+    <a href="">
+    <span class="material-symbols-outlined">
+        house
+        </span>
+        all</a>
+    </div>
+    <div class="bottom-item" id="propreties-item">
+        <a href="{% url 'main:properties_views' %}">
+            <span class="material-symbols-outlined">
+                factory
+                </span>
+            Properties</a>
+        </div>
+        <div class="bottom-item" id="hotel-item">
+            <a href="">
+            <span class="material-symbols-outlined">
+                hotel
+                </span>
+                HOTEL</a>
+            </div>
+            <div class="bottom-item" id="villa-item">
+                
+                    <span class="material-symbols-outlined">
+                    villa
+                    </span>
+                    <a href="" {% if 'ture' in request.COOKIES.dark_mode%} class="txt-white" {% endif %}>
+                    
+                    villa</a>
+                </div>
+            </div>
+            
+
+</div>
+ </main>
+{% endblock%}

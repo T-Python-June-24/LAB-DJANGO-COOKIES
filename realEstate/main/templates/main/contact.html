@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block style %}
+<style>
+    body{
+        background-image: url("{% static 'resources/email.jpg' %}");
+    }
+</style>
+{% endblock %}
+{% block main %}
+<main class="contact-container">  
+    <div class="contact-info">
+        <div class="title">
+        <h3>CONTACT US</h3>
+    </div>
+    <div class="info">
+        <h4>TELEPHONE: <a href="tel:+96657263883764">+966 57263883764</a></h4>
+        <h4>EMAIL:<a href="mailto:info@realstate.com " style="font-family: Poppins; letter-spacing: -0.1px;">info@realstate.com</a></h4>
+        <h4>ADDRESS:<br> <br>
+        <span class="small-text">ANAS BIN MALIK , RIYADH <br>BULDING W-112 <br> SAUID ARABIA</span></h4>
+
+    </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.088488054386!2d46.725092725198955!3d24.82664732795137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efc6d472d42af%3A0x24b3a53de9cbc5c3!2sPark%20Avenue%20Mall!5e0!3m2!1sen!2ssa!4v1720804426673!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</main>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'main/base.html'%}
+{% load static %}
+
+{% block style %}
+<style>
+    body{
+        background-color: #efe9e4;
+    }
+    .dark_mode {
+    background-color: rgb(28, 28, 28);
+  }
+  .light_mode{
+    background-color: #efe9e4;
+
+  }
+</style>
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="main-content">
+        <div {% if 'true' in request.COOKIES.dark_mode %} class="our-proprties-dark" {% else %} class="our-proprties" {% endif %}>
+            <h4>Our Properties</h4>
+        </div>
+        
+        <div class="cards-prop">
+            {% for property in properties %}
+            <div class="card-container">
+                <div class="card-image">
+                    <img  class="card-image" src="{% static property.image %}" alt="{{property.title}}">
+                </div>
+                <div class="card-title">
+                    <h4>{{property.title}}</h4>
+                </div>
+                <div class="more-button">
+                    
+                    <a href="" class="flex-end">more</a>
+                    
+                </div>
+                
+            </div>
+            {% endfor %}
+            
+
+            <!--  -->
+         
+        
+        
+        
+        
+        </div>
+        
+        </div>
+</main>
+{% endblock %}
