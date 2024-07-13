@@ -5,7 +5,6 @@
     font-family: 'Phudu', sans-serif;
 }
 
-
 .home-background {
     background-image: url('../images/skyscraper.jpeg');
     background-size: cover;
@@ -34,7 +33,6 @@
     color: black;
     text-decoration: none;
     font-size: 40px;
-
  }
 
  .navbar-main{
@@ -59,15 +57,18 @@
     justify-content: space-between;
     padding: 5px;
     width: 144px;
+    cursor:pointer;
  }
 .navbar-right span{
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 .navbar-right a {
     text-decoration: none;
     color: black;
 }
+
 .home-content{
     display: flex;
     flex-direction: column;
@@ -189,3 +190,76 @@ footer{
     text-align: center;
     padding: 10px 0px;
 } 
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-container-logo {
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-main {
+    background-color: #333;
+}
+
+.dark-mode .navbar-main a {
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-right span,
+.dark-mode .navbar-right a {
+    color: #e0e0e0;
+}
+
+.dark-mode .home-background {
+    background-image: url('../images/skyscraper-dark.jpg'); 
+}
+
+.dark-mode .home-content-btn {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+.dark-mode .bottom-navbar {
+    background-color: #333;
+}
+
+.dark-mode .house-a div {
+    background-color: #2e7d32;
+}
+
+.dark-mode .house-a span {
+    color: #81c784;
+}
+
+.dark-mode .properties-a div {
+    background-color: #5d4037;
+}
+
+.dark-mode .properties-a span {
+    color: #d7ccc8;
+}
+
+.dark-mode .hotel-a div {
+    background-color: #d32f2f;
+}
+
+.dark-mode .hotel-a span {
+    color: #ef9a9a;
+}
+
+.dark-mode .villa-a div {
+    background-color: #1e88e5;
+}
+
+.dark-mode .villa-a span {
+    color: #90caf9;
+}
+
+.dark-mode footer {
+    background-color: #333;
+    border-top-color: #e0e0e0;
+    color: #e0e0e0;
+}

@@ -1,101 +1,298 @@
-/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Phudu', sans-serif;
 }
 
-body, html {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
 
+.home-background {
+    background-image: url('../images/skyscraper.jpeg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 .navbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    color: white;
     padding: 10px 0;
     position: fixed;
-    top: 0;
     z-index: 10;
+    margin-top: 42px;
 }
-
-.navbar .container {
+ .navbar-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap:50px;
     flex-direction: row;
- 
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    color: white;
+ }
+ .navbar-container-logo{
+    color: black;
     text-decoration: none;
-}
+    font-size: 40px;
 
-.navbar-nav {
-    list-style: none;
+ }
+
+ .navbar-main{
     display: flex;
-}
+    justify-content:center;
+    align-items: center;
+    width: 550px;
+    height: 70px;
+    gap: 48px;
+    padding: 5px;
+    background-color: white;
 
-.nav-item {
-    margin-left: 20px;
-}
-
-.nav-link {
-    color: white;
+    border-radius: 40px;
+ }
+ .navbar-main a{
+    color: black;
     text-decoration: none;
-    font-size: 1rem;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-/* Hero section styling */
-.home-background {
-    background-image: url( "../images/skyscraper.jpeg");
-    background-size: cover;
-    background-position: center center;
-    height: 100vh; /* Full viewport height */
+ }
+ .navbar-right {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 144px;
+ }
+.navbar-right span{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+span:hover{
+    text-decoration: none;
+    background-color: blue;
+    cursor: pointer;
+    color: black;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: black;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px; 
+}
+.home-content h1{
+    font-size: 100px;
+}
+.home-content-btn{
+    width: 185px;
+    margin: 15PX;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 83px;
+    font-size: 1rem;
+    color:white;
+}
+.bottom-navbar{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 94px;
+    background: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 80px;
+    align-items: center;
+}
+.house-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.house-a div{ 
+    background-color: rgb(158, 218, 113);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
-    position: relative;
+    align-items: center;
+}
+.house-a span{ 
+    color: rgb(98, 211, 98);
+}
+
+
+.properties-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.properties-a div{ 
+    background-color: antiquewhite;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.properties-a span{ 
+    color: rgb(211, 169, 114);
+}
+.hotel-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.hotel-a div{ 
+    background-color: pink;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hotel-a span{ 
+    color: rgb(205, 41, 68);
+}
+
+.villa-a{
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    border-radius: 50%;
+    align-items: center;
+}
+.villa-a div{ 
+    background-color: rgb(135, 166, 216);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.villa-a span{ 
+    color: rgb(135, 166, 216);
+}
+
+
+footer{
+    position:static;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid black;
+    background-color: black;
     color: white;
     text-align: center;
-
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color:black;
-    max-width: 600px;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-}
-
-.btn {
-    background-color: #ff6600;
-    color: white;
+    padding: 10px 0px;
+} 
+.mode-toggle {
     padding: 10px 20px;
-    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    color: black;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
-.btn:hover {
-    background-color: #cc5200;
+.mode-toggle.active {
+    background-color: darkgray;
+    color: white;
+}
+
+
+body.dark-mode .mode-toggle {
+    background-color: none;
+    color: black;
+}
+
+body.dark-mode .mode-toggle.active {
+    background-color: darkgray;
+    color: white;
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-container-logo {
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-main {
+    background-color: #333;
+}
+
+.dark-mode .navbar-main a {
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar-right span,
+.dark-mode .navbar-right a {
+    color: #e0e0e0;
+}
+
+.dark-mode .home-background {
+    background-image: url('../images/skyscraper-dark.jpg'); /* Optional: Different background image for dark mode */
+}
+
+.dark-mode .home-content-btn {
+    background-color: #e0e0e0;
+    color: #121212;
+}
+
+.dark-mode .bottom-navbar {
+    background-color: #333;
+}
+
+.dark-mode .house-a div {
+    background-color: #2e7d32;
+}
+
+.dark-mode .house-a span {
+    color: #81c784;
+}
+
+.dark-mode .properties-a div {
+    background-color: #5d4037;
+}
+
+.dark-mode .properties-a span {
+    color: #d7ccc8;
+}
+
+.dark-mode .hotel-a div {
+    background-color: #d32f2f;
+}
+
+.dark-mode .hotel-a span {
+    color: #ef9a9a;
+}
+
+.dark-mode .villa-a div {
+    background-color: #1e88e5;
+}
+
+.dark-mode .villa-a span {
+    color: #90caf9;
+}
+
+.dark-mode footer {
+    background-color: #333;
+    border-top-color: #e0e0e0;
+    color: #e0e0e0;
 }
