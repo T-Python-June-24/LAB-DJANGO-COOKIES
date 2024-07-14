@@ -1,32 +1,19 @@
 {% extends 'base.html'%} 
 {% load static%}
+
 {% block title %} Properties {% endblock %}
 
 {% block content %}
 <div class="properties-background">
     <div class="head"><h1>OUR PROPERTIES</h1></div>
     <div class="properties-container">
+        {% for villa in properties %}
         <div class="card-1">
-            <img src="{%static 'images/villa1.jpg' %}">
-            <p>VILLA MODERN IN MALQA</p>
+            <img src="{% static 'images/'|add:villa.image %}">
+            <p>{{villa.title}}</p>
             <div class="btn-1"> <button> more</button> </div>
-        </div>
-        <div class="card-1">
-            <img src="{%static 'images/villa2.jpg' %}">
-            <p>GREAT HOME FOR YOU IN RIMAL</p>
-            <div class="btn-1"> <button> more</button> </div>
-        </div>
-        <div class="card-1">
-            <img src="{%static 'images/villa3.jpg' %}">
-            <p>VILLA WITH 8 BEDROOMS IN SWEDEY</p>
-            <div class="btn-1"> <button> more</button> </div>
-        </div>
-        <div class="card-1">
-            <img src="{%static 'images/villa4.jpg' %}">
-            <p>VILLA FUTER SPACE</p>
-            <div class="btn-1"> <button> more</button> </div>
-        </div>
-        
+            </div>
+        {% endfor%}
     </div>
 </div>
 {% endblock %}
