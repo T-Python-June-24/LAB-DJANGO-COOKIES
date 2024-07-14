@@ -1,0 +1,352 @@
+/* Reset styles and global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 80px; /* Adding margin to body for all directions */
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Header styling */
+.header-container {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    }
+
+.home-logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 40px;
+}
+.home-logo a:hover{
+    color: #ff4500; /* لون جديد عند التحويم */
+
+}
+
+
+.header-menu {
+    flex-grow: 1;
+    text-align: center;
+
+}
+
+.menu-nav
+ {
+ display: inline-block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px 40px;
+    border-radius: 50px; /* Reduce border radius to make it smaller */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+ }.nav-list {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu-nav .nav-list li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu-nav .nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.menu-nav .nav-list li a:hover {
+
+    color: #d1480f;
+}
+
+.material-icons {
+    font-size: 24px;
+
+}
+
+
+.explore-btn {
+    display: inline-block;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #d1480f;
+}
+
+/* Properties section styling */
+.our-properties {
+    margin-top: 50px;
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.property {
+    width: 30%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.property h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.more-info {
+    display: inline-block;
+    background-color: black;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    float: right; /* محاذاة الزر إلى اليسار */
+    transition: background-color 0.3s ease;
+}
+
+.more-info:hover {
+    background-color: #d1480f;
+}
+
+/* Footer styling */
+
+
+.footer {
+display: flex;
+
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* يجعل الفوتر بعرض الصفحة بالكامل */
+    position: center; /* لتمكين وضع الإطار في المنتصف */
+}
+
+.footer-content {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px 40px;
+    border-radius: 50px; /* Reduce border radius to make it smaller */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 50%; /* تحديد عرض محتوى الفوتر */
+    margin: 0 auto; /* توسيط المحتوى */
+}
+
+.icon-container {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    background-color: #444;
+    border-radius: 50%;
+    padding: 15px;
+    border: 2px solid #fff; /* إضافة إطار أبيض */
+}
+
+.icon-container p {
+    margin: 0;
+    color: #fff;
+}
+
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    background-color: #444;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid #fff; /* إضافة إطار أبيض */
+}
+
+.icon-container p {
+    margin: 0;
+
+}
+
+.icon-container:hover {
+    opacity: 0.7; /* تأثير عند التمرير */
+}
+
+
+body.propertiesu {
+    background: url('../images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.property-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.property-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.property-item h2 {
+    margin-top: 10px;
+}
+
+.more-info {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.more-info:hover {
+    background-color: #555;
+}
+nav a {
+    color: inherit; /* استخدام نفس لون النص الأساسي */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* تأثير الانتقال للألوان والتحويل */
+}
+
+nav a:hover {
+    color: #ff4500; /* لون جديد عند التحويم */
+    transform: scale(1.2); /* تكبير النص عند التحويم */
+}
+/* main/static/main/css/style.css */
+
+/* الوضع النهاري */
+body.home {
+    background: url('../images/background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: black;
+}
+body.light-mode {
+
+
+}
+
+/* وضع الليل */
+body.dark-mode {
+
+}
+
+body.light-mode .home-logo a {
+    color: black;
+}
+
+body.light-mode .nav-list a {
+    color: black;
+}
+body.light-mode .menu-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+body.light-mode .footer-content {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode .theme-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+body.light-mode .top-bar-right a {
+    color: black;
+}
+
+/* الوضع الليلي */
+
+/* الوضع الليلي */
+
+/*body.dark-mode {
+    background-color: white;
+    background: url('../images/dark.jfif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}*/
+
+body.dark-mode .home-logo a {
+    color: white;
+}
+body.dark-mode .home-logo a:hover{
+    color: #ff4500; /* لون جديد عند التحويم */
+
+}
+body.dark-mode .nav-list a {
+    color: white;
+}
+
+body.dark-mode .top-bar-right a {
+    color: white;
+}
+
+
+body.dark-mode .menu-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+body.dark-mode .footer-content {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode .theme-button {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+body.dark-mode .contact-details{
+    color: white;
+}
+body.light-mode .contact-details{
+    color: black;
+}
+

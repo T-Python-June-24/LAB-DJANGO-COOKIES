@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Properties - Redwan Real Estate{% endblock %}
+{% block page %}properties{% endblock %}
+{% block body_class %}properties{% endblock %}
+
+{% block content %}
+<section class="our-properties">
+        <h1>Our Properties</h1>
+        <div class="property-list">
+            {% for property in properties %}
+            <div class="property">
+                <img src="{% static 'main/images/' %}{{ property.image }}" alt="{{ property.title }}">
+                <h4>{{ property.title }}</h4>
+                <a href="#" class="more-info">More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
