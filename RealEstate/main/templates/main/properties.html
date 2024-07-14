@@ -1,0 +1,29 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Properties{% endblock %}
+
+{% block body_class %}
+    {% if 'mode' in request.COOKIES %}
+        dark-mode
+    {% else %}
+        light-mode
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="properties-container">
+    <h1 class="properties-title">Our Properties</h1>
+    <div class="properties-grid">
+        {% for property in properties %}
+            <div class="property-card">
+                <div class="property-image-container">
+                    <img class="property-image" src="{% static 'main/images/'|add:property.image %}" alt="{{ property.title }}">
+                </div>
+                <p class="property-title">{{ property.title }}</p>
+                <button class="more-button">more</button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

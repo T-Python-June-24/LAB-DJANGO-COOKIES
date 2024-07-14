@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block body_class %}
+    {% if 'mode' in request.COOKIES %}
+        dark-mode
+    {% else %}
+        light-mode
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div class="background background-contact">
+    <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>Phone: <a href="tel:+96657263883764">+966 57263883764</a></p>
+        <p>Email: <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+        <p>Address: Anas Bin Malik, Riyadh, Building W-112, Saudi Arabia</p>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.774984301751!2d46.67950731498353!3d24.701800984093076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f032bf129fd29%3A0xa37e57f0f3aaee5e!2sYour%20Location%20Here!5e0!3m2!1sen!2sus!4v1624452854481!5m2!1sen!2sus" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</div>
+{% endblock %}

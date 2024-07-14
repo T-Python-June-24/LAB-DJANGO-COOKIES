@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html {% if 'mode' in request.COOKIES %}class="dark"{% else %}class="light"{% endif %}>
+<head>
+    <title>{% block title %}Real Estate{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header>
+        <div class="top-left-container">
+            <a href="{% url 'RealEstate:home' %}"><h3>Home</h3></a>
+        </div>
+        <div class="header-middle">
+            <a href="{% url 'RealEstate:home' %}">Home</a>
+            <a href="{% url 'RealEstate:properties' %}">Properties</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="{% url 'RealEstate:contact' %}">Contact</a>
+        </div>
+        <div class="top-right-container">
+            <img src="{% static 'main/images/icons/profile-b.png' %}" alt="Profile" class="icon">
+            <a href="#">Signup</a>
+            <a href="{% url 'RealEstate:light_mode' %}"><img src="{% static 'main/images/icons/sun-b.png' %}" alt="Sun Icon" class="icon"></a>
+            <a href="{% url 'RealEstate:dark_mode' %}"><img src="{% static 'main/images/icons/moon-b.png' %}" alt="Moon Icon" class="icon"></a>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <img src="{% static 'main/images/icons/all.png' %}" alt="All-icon">
+            <img src="{% static 'main/images/icons/properties.png' %}" alt="Properties-icon">
+            <img src="{% static 'main/images/icons/hotel.png' %}" alt="Hotel-icon">
+            <img src="{% static 'main/images/icons/villa.png' %}" alt="Villa-icon">
+        </div>
+    </footer>
+</body>
+</html>

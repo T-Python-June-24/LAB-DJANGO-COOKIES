@@ -1,0 +1,224 @@
+/* Reset default styles */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Default text color */
+    background-color: #000; /* Default background color */
+}
+
+/* Define dark mode styles */
+html.dark {
+    color: #fff;
+    background-color: #333; /* Dark mode background color */
+}
+
+/* Background images */
+.background-light {
+    background-image: url('/static/main/images/skyscraper-light.jpg');
+}
+
+.background-dark {
+    background-image: url('/static/main/images/skyscraper-dark.jpg');
+}
+
+.background-contact {
+    background-image: url('/static/main/images/email.jpg');
+}
+
+/* Contact section layout */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    color: #fff; /* Text color in contact info */
+}
+
+.map-container {
+    flex: 1;
+    text-align: right;
+    padding: 50px;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    height: 500px;
+}
+
+/* Header styles */
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Header background color */
+}
+
+.top-left-container a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff; /* Header link color */
+}
+
+.header-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-middle a {
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1em;
+    color: #fff; /* Header link color */
+}
+
+.top-right-container {
+    display: flex;
+    align-items: center;
+}
+
+.top-right-container a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #fff; /* Header link color */
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+    filter: invert(1); /* Invert icon colors in dark mode */
+}
+
+/* Main content section */
+.main-content {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.main-content h1 {
+    font-size: 3em;
+}
+
+.main-content p {
+    font-size: 1.2em;
+}
+
+/* Button styles */
+button {
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    width: 200px;
+    border-radius: 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Footer background color */
+    padding: 10px 0;
+}
+
+.footer-icons img {
+    height: 40px;
+    width: 40px;
+    margin: 0 15px;
+}
+
+/* Properties section styles */
+.properties-container {
+    padding: 20px;
+    min-height: 100vh;
+    color: #fff; /* Text color in properties section */
+}
+
+.properties-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.properties-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.property-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+}
+
+.property-image-container {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.property-image {
+    width: 100%;
+    height: auto;
+}
+
+.property-title {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.more-button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode specific styles */
+.dark-mode {
+    background-color: #333; /* Dark mode body background color */
+}
+
+.dark-mode .contact-info,
+.dark-mode .property-title {
+    color: #fff; /* Dark mode text color */
+}
+
+.dark-mode .header {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark mode header background color */
+}
+
+.dark-mode button,
+.dark-mode .more-button {
+    background-color: #fff; /* Dark mode button background color */
+    color: #000; /* Dark mode button text color */
+}
