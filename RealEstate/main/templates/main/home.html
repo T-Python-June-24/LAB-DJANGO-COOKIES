@@ -1,8 +1,20 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block title %} Home {% endblock %}
+{% block style %}
+<style>
+    .home-light {
+        background-image: url("{% static 'images/skyscraper.jpeg' %}");
+        background-repeat: no-repeat;
+    }
+    .home-dark {
+        background-image: url("{% static 'images/skyscraper-dark.jpg' %}");
+        background-repeat: no-repeat;
+    }
+</style>
+{% endblock %}
 {% block content %}
-    <main class="home-light">
+    <main {% if 'mode' in  request.COOKIES %} class="home-dark"  {% else %} class="home-light"> {% endif %}>
         <div class="home-middle">
             <h1>FIND YOUR DREAMS</h1>
             <p>
