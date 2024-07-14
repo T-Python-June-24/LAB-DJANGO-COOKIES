@@ -1,0 +1,9 @@
+.dark_mode {
+  background-image: url(/static/images/skyscraper-dark.jpg);
+  background-size: cover;
+}
+
+.light_mode {
+  background-image: url(/static/images/skyscraper.jpeg);
+  background-size: contain;
+}
