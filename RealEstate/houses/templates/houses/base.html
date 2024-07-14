@@ -1,6 +1,7 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<
+<html lang="en" {% if "mode" in request.COOKIES %} class="dark" {% endif %} >
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,21 +17,33 @@
 
   
   <style>
+    
     :root{
         --dark-color: #19283f;
 
     }
     
-    .body{
-        height: 10000px;;
+    body{
+        background-image: url("{% static 'images/skyscraper.jpeg' %}");
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Adjust height as needed */
     }
-    
-    .container-bg {
-            background-image: url("{% static 'images/skyscraper.jpeg' %}");
+
+    html.dark body {
+        background-image: url("{% static 'images/skyscraper-dark.jpg' %}");
+        background-color: #343439;
         background-size: cover;
         background-position: center;
         height: 100vh; /* Adjust height as needed */
 
+    }
+
+    html.dark .container-bg {
+        background-image: url("{% static 'images/skyscraper-dark.jpeg' %}");
+        background-size: cover;
+        background-position: center;
     }
       /* <weight>: Use a value from 300 to 900 */
     .navbar-nav, .navbar-brand {
@@ -40,6 +53,8 @@
     font-style: normal;
     font-size: 16px;
     }
+
+    
  
     .h1-text {
     font-family: "Phudu", sans-serif;
@@ -91,10 +106,11 @@
         font-size: 12px;
     }
 
+    
   </style>
   </head>
   <body>
-        <div class="container-bg top-sticky">
+        <div  class="container-bg top-sticky" >
             <nav class="navbar navbar-expand-lg">
                 <div class="container w-50">
                     <a class="navbar-brand  fs-2 me-5" href="{% url 'home' %}">Home</a>
@@ -103,28 +119,27 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav pt-3 pl-0 pr-0 pb-3 bg-white rounded-5 top-5 mx-6 my-5 justify-content-center flex-grow-1 ">
-                        <li class="nav-item">
-                            <a class="nav-link active mx-3" aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item mx-3 ">
-                            <a class="nav-link" href="{% url 'properties' %}">Properties</a>
-                        </li>
-                        <li class="nav-item mx-3 ">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item mx-3 ">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item mx-3 ">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        
+                            <li class="nav-item">
+                                <a class="nav-link active mx-3" aria-current="page" href="{% url 'home' %}">Home</a>
+                            </li>
+                            <li class="nav-item mx-3 ">
+                                <a class="nav-link" href="{% url 'properties' %}">Properties</a>
+                            </li>
+                            <li class="nav-item mx-3 ">
+                                <a class="nav-link" href="#">Services</a>
+                            </li>
+                            <li class="nav-item mx-3 ">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item mx-3 ">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
                         </ul>
                         <div class="d-flex align-items-center flex-grow gap-3 m-2">
                             <span class="material-symbols-outlined ms-5">person</span>
                             <span> <a class="text-decoration-none text-dark" href="#"> Sign up</a></span>
-                            <a class="material-symbols-outlined p-1 bg-white rounded-4" href="{% url 'home' %}" >light_mode</a>
-                            <span class="material-symbols-outlined">dark_mode</span>
+                            <a href="{% url 'lightModeView' %}" ><span class="material-symbols-outlined p-1 bg-white rounded-4" >light_mode</span></a>
+                            <a href="{% url 'darkModeView' %}" ><span class="material-symbols-outlined">dark_mode</span></a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +148,6 @@
             {% block content %}   
             {% endblock %}
         </div>
-        
         
        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
