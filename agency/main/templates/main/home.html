@@ -1,0 +1,34 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Real Estate Agency{% endblock %}
+
+{% block content %}
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="col-6"><h1 class="largeplease">Find your Dreams</h1></div>
+
+            <p class="col-6">Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+        
+            <div><a class="fonto" href="properties">Explore Properties</a></div>
+        
+        </div>
+
+    </section>
+
+    <footer>
+        <div>
+            <nav class="nav3">
+                <a href="all"><img src="{% static '/house.png' %}" height="20">ALL</a>
+                <a href="{% url 'main:properties' %}"><img src="{% static '/factory.png' %}" height="20">PROPERTIES</a>
+                <a href="hotels"><img src="{% static '/hotel.png' %}" height="20">HOTELS</a>
+                <a href="villa"><img src="{% static '/villa.png' %}" height="20">VILLA</a>
+            </nav>
+        </div>
+    </footer>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Real Estate Agency{% endblock %}
+
+{% block content %}
+
+
+<section class="container">
+
+    <div class="d-flex bd-highlight">
+        
+            <div class="gallery p-2 flex-fill bd-highlight">
+                <a target="_blank" href="villa1.jpg"><img src="{% static '/villa1.jpg' %}" ></a>
+                <div class="desc">VILLA MODERN IN MALAQA</div>
+            </div>
+            
+            <div class="gallery p-2 flex-fill bd-highlight">
+                <a target="_blank" href="villa2.jpg"><img src="{% static '/villa2.jpg' %}"></a>
+                <div class="desc">GREAT HOME FOR YOU IN RIMAL</div>
+            </div>
+            
+            <div class="gallery p-2 flex-fill bd-highlight">
+                <a target="_blank" href="villa3.jpg"><img src="{% static '/villa3.jpg' %}"></a>
+                <div class="desc">VILLA WITH 8 BEDROOMS IN SWEDEN</div>
+            </div>
+        
+    </div>
+
+    
+    <div class="gallery col-3 p-2">
+        <a target="_blank" href="villa4.jpg"><img src="{% static '/villa4.jpg' %}"></a>
+        <div class="desc">MODERN VILLA IN TURKEY</div>
+    </div>
+
+
+</section>
+
+{% endblock %}

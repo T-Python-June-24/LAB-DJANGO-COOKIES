@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}Real Estate Agency{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="col3">
+            <h1>CONTACT US</h1>
+
+            <h3>TELEPHONE +966545454545</h3>
+
+            <h3>EMAIL: INFO@REALESTATE.COM</h3>
+
+            <h3>ADDRESS</h3>
+
+            <h6>Riyadh, somewhere</h6>
+
+        </div>
+
+        <div class="col5">
+            <div id="googleMap" style="width:50%; height:300px;"></div>
+
+            <script>
+                function myMap() {
+                    var mapProp= {
+                    center:new google.maps.LatLng(51.508742,-0.120850),zoom:5,};
+                    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+        </div>
+    </div>
+
+{% endblock %}
