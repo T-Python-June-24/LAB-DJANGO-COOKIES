@@ -9,6 +9,14 @@
     padding-bottom: 5rem;
 }
 
+body {
+    background-image: url(/static/skyscraper.jpeg);
+}
+
+body.dark {
+    background-image: url(/static/skyscraper-dark.jpg);
+}
+
 a:link { 
     text-decoration: none; 
     color: rgb(59, 59, 59);
@@ -45,8 +53,9 @@ a:active {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    align-items: end;
-    justify-content: end;
+    align-items: center;
+    justify-content: center;
+    color: azure;
 }
 
 .btn1 {
@@ -65,11 +74,6 @@ a:active {
     top: 0;
 }
 
-body {
-    background-image: url(skyscraper.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 footer {
     display: flex;

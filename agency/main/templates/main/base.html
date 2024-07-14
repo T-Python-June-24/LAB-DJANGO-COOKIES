@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" {% if 'mode' in request.COOKIES %} class="light" {% endif %} {% if 'mode' in request.COOKIES %} class="dark" {% endif %}>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
 </head>
 
-<body>
+<body  {% if  'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} class="dark" {% endif %}>
     <div class="container">
     <header class="headerC">
 
@@ -33,9 +36,9 @@
 
         <div>
             <nav class="nav2">
-                <a class="btn1" href="signup"><img src="{% static '/person.png' %}" alt="Person" height="20">Sign up</a>
-                <a class="btn2" href="light"><img src="{% static '/lightM.png' %}" alt="Light Mode" height="20"></a>
-                <a class="btn3" href="dark"><img src="{% static '/darkM.png' %}" alt="Dark Mode" height="20"></a>
+                <a href="signup"><span class="material-symbols-outlined">person</span>Sign Up</a>
+                <a href="{% url 'main:light'%}"><span class="material-symbols-outlined" {% if  'mode' in request.COOKIES and request.COOKIES.mode == 'light' %} active-icon {% endif %}>light_mode</span></a>
+                <a href="{% url 'main:dark'%}"><span class="material-symbols-outlined" {% if  'mode' in request.COOKIES and request.COOKIES.mode == 'dark' %} active-icon {% endif %}>dark_mode</span></a>
             </nav> 
         </div>
 
