@@ -113,17 +113,17 @@
         <div  class="container-bg top-sticky" >
             <nav class="navbar navbar-expand-lg">
                 <div class="container w-50">
-                    <a class="navbar-brand  fs-2 me-5" href="{% url 'home' %}">Home</a>
+                    <a class="navbar-brand  fs-2 me-5" href="{% url 'houses:home' %}">Home</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav pt-3 pl-0 pr-0 pb-3 bg-white rounded-5 top-5 mx-6 my-5 justify-content-center flex-grow-1 ">
                             <li class="nav-item">
-                                <a class="nav-link active mx-3" aria-current="page" href="{% url 'home' %}">Home</a>
+                                <a class="nav-link active mx-3" aria-current="page" href="{% url 'houses:home' %}">Home</a>
                             </li>
                             <li class="nav-item mx-3 ">
-                                <a class="nav-link" href="{% url 'properties' %}">Properties</a>
+                                <a class="nav-link" href="{% url 'houses:properties' %}">Properties</a>
                             </li>
                             <li class="nav-item mx-3 ">
                                 <a class="nav-link" href="#">Services</a>
@@ -138,8 +138,8 @@
                         <div class="d-flex align-items-center flex-grow gap-3 m-2">
                             <span class="material-symbols-outlined ms-5">person</span>
                             <span> <a class="text-decoration-none text-dark" href="#"> Sign up</a></span>
-                            <a href="{% url 'lightModeView' %}" ><span class="material-symbols-outlined p-1 bg-white rounded-4" >light_mode</span></a>
-                            <a href="{% url 'darkModeView' %}" ><span class="material-symbols-outlined">dark_mode</span></a>
+                            <a href="{% url 'houses:lightModeView' %}" ><span class="material-symbols-outlined p-1 bg-white rounded-4" >light_mode</span></a>
+                            <a href="{% url 'houses:darkModeView' %}" ><span class="material-symbols-outlined">dark_mode</span></a>
                         </div>
                     </div>
                 </div>

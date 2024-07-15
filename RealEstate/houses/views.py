@@ -20,11 +20,11 @@ def properties(request: HttpRequest):
 
 
 def darkModeView(request:HttpRequest):
-    response = redirect("home")
+    response = redirect("houses:home")
     response.set_cookie("mode","dark",max_age=60*60*24)
     return response
 
 def lightModeView(request:HttpRequest):
-    response = redirect("home")
+    response = redirect("houses:home")
     response.set_cookie("mode","light",max_age= -3600)
     return response
