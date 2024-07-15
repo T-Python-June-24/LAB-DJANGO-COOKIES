@@ -1,6 +1,6 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html lang="en" {% if 'mode' in request.COOKIES%} class="dark_mode" {% else%} class="light_mode" {% endif %}>
+<html lang="en" class="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,23 +12,23 @@
   <link rel="stylesheet" href="{% static 'css/style.css'%}">
   {% tailwind_css %}
 </head>
-<body>
-  <nav class="my-14 dark_mode flex flex-row justify-around justify-items-center">
-    <div class="text-4xl">
+<body  class="{% if request.COOKIES.mode == 'dark' %}dark{% else %}light{% endif %}">
+  <nav class="my-14 flex flex-row justify-around justify-items-center">
+    <div class="text-4xl text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">
       Home
     </div>
-    <div class="flex flex-row w-1/2 border rounded-full bg-white  px-20 py-5 justify-between drop-shadow-md">
-      <a href="{% url 'main:home_view' %}">Home</a>
-      <a href="{% url 'main:properties_view' %}">Properties</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
-      <a href="{% url 'main:contact_view' %}">Contact</a>
+    <div class="flex flex-row w-1/2 border-0 rounded-full px-20 py-5 justify-between drop-shadow-md {% if request.COOKIES.mode == 'dark' %}bg-gray-800{% else %}bg-white{% endif %}">
+      <a href="{% url 'main:home_view' %}" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Home</a>
+      <a href="{% url 'main:properties_view' %}" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Properties</a>
+      <a href="#" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Services</a>
+      <a href="#" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">About</a>
+      <a href="{% url 'main:contact_view' %}" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Contact</a>
     </div>
     <div class="flex flex-row gap-2 justify-center justify-items-center">
-      <span class="material-symbols-outlined">person</span>
-      <a href="">Sign in</a>
-      <a href="{% url 'main:light_view' %}"><span class="material-symbols-outlined">light_mode</span></a>
-      <a href="{% url 'main:dark_view' %}"><span class="material-symbols-outlined">dark_mode</span></a>
+      <span class="material-symbols-outlined text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">person</span>
+      <a href="" class="text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Sign in</a>
+      <a href="{% url 'main:light_view' %}"><span class="material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}text-white{% else %}text-black p-1 border rounded-full bg-white{% endif %}">light_mode</span></a>
+      <a href="{% url 'main:dark_view' %}"><span class="material-symbols-outlined material-symbols-outlined {% if request.COOKIES.mode == 'dark' %}text-black p-1 border rounded-full bg-white{% else %}text-black{% endif %}">dark_mode</span></a>
     </div>
   </nav>
   {% block content %}

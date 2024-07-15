@@ -46,10 +46,8 @@ module.exports = {
           fontFamily: {
             phudu: ['Phudu', 'sans-serif'],
           },
-          backgroundImage: {
-            'light-bg': "url('/static/images/skyscraper.jpeg')",
-        },
     },
+  },
 
     plugins: [
         /**

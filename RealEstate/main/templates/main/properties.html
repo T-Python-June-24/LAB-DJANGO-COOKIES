@@ -5,28 +5,19 @@ Home Page
 {% load static %}
 {% block content %}
 <main>
-  <h1>OUR PROPERTIES</h1>
-  <div>
-    <div>
-      <img src="{% static 'images/villa1.jpg' %}">
-      <p>VILLA MODERN IN MALQA</p>
-      <a href="">more</a>
+  <h1 class="ml-20 text-2xl">OUR PROPERTIES</h1>
+  <div class="container ml-20 mt-10">
+    <div class="flex flex-wrap justify-center gap-6">
+        {% for property in properties %}
+            <div class="bg-white flex flex-col shadow-lg border rounded-3xl mt-4 overflow-hidden w-64">
+                <img class=" border rounded-t-3xl" src="{% static 'images/' %}{{ property.image }}" alt="{{ property.title }}">
+                <div class="p-4">
+                    <p class="font-semibold text-lg mt-6 mb-4">{{ property.title }}</p>
+                    <a href="#" class="py-2 px-4 border rounded-full bg-black text-white hover:underline">more</a>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    <div>
-      <img src="{% static 'images/villa2.jpg' %}">
-      <p>GREAT HOME FOR YOU IN RIMAL</p>
-      <a href="">more</a>
-    </div>
-    <div>
-      <img src="{% static 'images/villa3.jpg' %}">
-      <p>VILLA WITH 8 BEDROOMS IN SWEDEY</p>
-      <a href="">more</a>
-    </div>  
-    <div>
-      <img src="{% static 'images/villa4.jpg' %}">
-      <p>GREAT HOME FOR YOU IN RIMAL</p>
-      <a href="">more</a>
-    </div>
-  </div>
+</div>
 </main>
 {% endblock %}

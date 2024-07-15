@@ -3,16 +3,15 @@
 Home Page
 {% endblock %}
 {% load static %}
-{% static 'images/skyscraper.jpeg' as bg-img %}
 {% block content %}
-  <main class="bg-light">
+  <main>
     <div class="flex flex-col ml-20 w-2/5 justify-stretch">
-      <h1 class="text-9xl mb-8">FIND YOUR DREAMS</h1>
-      <p class="text-xs mb-4">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+      <h1 class="text-9xl mb-8 text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">FIND YOUR DREAMS</h1>
+      <p class="text-xs mb-4 text-{% if request.COOKIES.mode == 'dark' %}white{% else %}black{% endif %}">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
       <a class="bg-black text-white py-2 px-3 w-1/4 text-center border rounded-full text-xs" href="{% url 'main:properties_view' %}">Explore Properties</a>
     </div>
-    <footer>
-      <div class="flex flex-row w-9/12 my-20 py-7 justify-center border  gap-16">
+    <footer class="flex flex-row justify-center">
+      <div class="flex flex-row w-1/2 my-20 py-7 justify-center border-0 rounded-full gap-16 {% if request.COOKIES.mode == 'dark' %}bg-gray-800{% else %}bg-white{% endif %}">
         <div class="flex flex-col">
           <span class="material-symbols-outlined border rounded-full p-2 bg-green-200">home</span>
           <a href="" class="text-green-200 text-center">ALL</a>
